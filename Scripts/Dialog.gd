@@ -9,8 +9,7 @@ signal next()
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	$AnimationPlayer.play("Intro")
-	$Label.text = Global.text
-	$ContinueButton.visible = false
+	$ContinueButton.visible = true
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):
@@ -19,9 +18,11 @@ func _ready():
 
 func _on_AnimationPlayer_animation_finished(anim_name):
 	if anim_name == "Intro":
-		$AnimationPlayer.play("SetText")
-		$ContinueButton.visible = true
-
+		setText(Global.text)
 
 func _on_ContinueButton_pressed():
 	emit_signal('next')
+
+func setText(text):
+	$Label.text = text
+	$AnimationPlayer.play("SetText")
