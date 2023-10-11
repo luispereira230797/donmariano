@@ -70,7 +70,7 @@ tracks/0/keys = {
 }
 
 [sub_resource type="RectangleShape2D" id=5]
-extents = Vector2( 22, 5.5 )
+extents = Vector2( 22, 4 )
 
 [node name="Player" type="KinematicBody2D"]
 script = ExtResource( 2 )
@@ -95,7 +95,7 @@ anims/Walk = SubResource( 4 )
 collision_layer = 16
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="KillerArea"]
-position = Vector2( -5, 64.5 )
+position = Vector2( -5, 63 )
 shape = SubResource( 5 )
 
 [node name="RayCast2DLeft" type="RayCast2D" parent="."]
