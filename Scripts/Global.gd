@@ -3,15 +3,12 @@ extends Node
 var items = ["cash", "ring", "phone"] #["cash", "ring", "phone"]
 var current_scene = "KilledByDrogadicto"
 var previous_scene = null
-var killedBy = ""
-var position = null
 var text = ""
 var itemSelected = false
+var lastCheckPoint = null
 
-func die(name, pos, textCinematic):
+func die(textCinematic):
 	itemSelected = false
-	killedBy = name
-	position = pos
 	current_scene = "KilledByDrogadicto"
 	callCinematic(textCinematic)
 
