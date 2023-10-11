@@ -63,4 +63,4 @@ func _on_Button_focus_exited(button):
 
 func _on_AcceptButton_pressed():
 	Global.select(selected)
-	Global.callCinematic("ESO ME SIRVE POR AHORA, GRACIAS DON")
+	Global.callCinematic("¡Eso me sirve! ¡Nos vemos mañana Don!")

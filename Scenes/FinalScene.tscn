@@ -1,10 +1,19 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=17 format=2]
 
 [ext_resource path="res://assets/sprites/backgroundfinal.png" type="Texture" id=1]
 [ext_resource path="res://assets/sprites/characterfinal.png" type="Texture" id=2]
 [ext_resource path="res://assets/sprites/wifefinal.png" type="Texture" id=3]
 [ext_resource path="res://Scripts/FinalScene.gd" type="Script" id=4]
 [ext_resource path="res://Scenes/Dialog.tscn" type="PackedScene" id=5]
+[ext_resource path="res://assets/sprites/characterfinalexpsad.png" type="Texture" id=6]
+[ext_resource path="res://assets/sprites/characterfinalexphappy.png" type="Texture" id=7]
+[ext_resource path="res://assets/sprites/characterfinalexpworried.png" type="Texture" id=8]
+[ext_resource path="res://assets/sprites/wifeexphappy.png" type="Texture" id=9]
+[ext_resource path="res://assets/sprites/wifeexpneutral.png" type="Texture" id=10]
+[ext_resource path="res://assets/sprites/wifeexpsad.png" type="Texture" id=11]
+[ext_resource path="res://assets/sprites/wifeexpangry.png" type="Texture" id=12]
+[ext_resource path="res://assets/sprites/characterfinalexpneutral.png" type="Texture" id=13]
+[ext_resource path="res://assets/sprites/wifeexpcry.png" type="Texture" id=14]
 
 [sub_resource type="Animation" id=1]
 resource_name = "Intro"
@@ -131,6 +140,61 @@ anims/Intro = SubResource( 1 )
 anims/RESET = SubResource( 2 )
 
 [node name="DialogBox" parent="." instance=ExtResource( 5 )]
+
+[node name="CharacterNeutral" type="Sprite" parent="."]
+visible = false
+position = Vector2( 642, 396 )
+scale = Vector2( 0.695602, 0.695602 )
+texture = ExtResource( 13 )
+
+[node name="CharacterHappy" type="Sprite" parent="."]
+visible = false
+position = Vector2( 616, 407 )
+scale = Vector2( 0.650926, 0.650926 )
+texture = ExtResource( 7 )
+
+[node name="CharacterSad" type="Sprite" parent="."]
+visible = false
+position = Vector2( 655, 404 )
+scale = Vector2( 0.752778, 0.752778 )
+texture = ExtResource( 6 )
+
+[node name="CharacterWorried" type="Sprite" parent="."]
+visible = false
+position = Vector2( 628.444, 403.25 )
+scale = Vector2( 0.651389, 0.651389 )
+texture = ExtResource( 8 )
+
+[node name="WifeHappy" type="Sprite" parent="."]
+visible = false
+position = Vector2( 592.889, 373.75 )
+scale = Vector2( 0.794907, 0.794907 )
+texture = ExtResource( 9 )
+
+[node name="WifeNeutral" type="Sprite" parent="."]
+visible = false
+position = Vector2( 599, 375 )
+scale = Vector2( 0.782176, 0.782176 )
+texture = ExtResource( 10 )
+
+[node name="WifeSad" type="Sprite" parent="."]
+visible = false
+position = Vector2( 593.445, 375.5 )
+scale = Vector2( 0.789815, 0.789815 )
+texture = ExtResource( 11 )
+
+[node name="WifeAngry" type="Sprite" parent="."]
+visible = false
+position = Vector2( 617, 375 )
+scale = Vector2( 0.7375, 0.7375 )
+texture = ExtResource( 12 )
+
+[node name="WifeCry" type="Sprite" parent="."]
+visible = false
+position = Vector2( 624, 373 )
+rotation = -0.0143174
+scale = Vector2( 0.733167, 0.733167 )
+texture = ExtResource( 14 )
 
 [connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_AnimationPlayer_animation_finished"]
 [connection signal="next" from="DialogBox" to="." method="_on_DialogBox_next"]

@@ -36,7 +36,6 @@ func move_character():
 
 func _on_Area2D_body_entered(body):
 	if body.get_name() == "Player" && canKill:
-		print("KILL ", body.get_name())
 		body._loseLife(get_name())
 		pass
 
@@ -46,11 +45,11 @@ func turn():
 		scale.x = -scale.x
 
 func loseLife():
+	canKill = false
 	$Area2D/CollisionShape2D.set_deferred("disabled", true)
 	$CollisionShape2D.set_deferred("disabled", true)
 
 
 func _on_KillArea_body_entered(body):
 	if body.get_name() == "Player":
-		loseLife()
 		body.kill(self)

@@ -35,5 +35,5 @@ func _on_DialogBox_next():
 		$AnimationPlayer.play("GameOverDrogadicto")
 		Global.gameOver()
 	else:
-		$DialogBox.setText("AH NO TENÉS, NADA, ENTONCES DAME TU VIDA")
+		$DialogBox.setText("¡Ah no tenés nada! ¡Entonces me llevo tu vida!")
 		die = true

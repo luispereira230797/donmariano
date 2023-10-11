@@ -74,8 +74,10 @@ func _physics_process(delta):
 	motion = move_and_slide(motion, up)
 
 func _loseLife(name):
-	Global.die(name, position, "ESTO ES UN ASALTO DON, ARRIBA LAS MANOS Y DAME LO QUE TENGAS CARAJO")
+	Global.die(name, position, "¡Esto es un asalto Don! ¡Arriba las manos y dame lo que tengas carajo!")
 	# get_tree().reload_current_scene()
 
 func kill(enemy):
-	motion.y = jumpHeight
+	if motion.y > 0:
+		motion.y = jumpHeight
+		enemy.loseLife()
