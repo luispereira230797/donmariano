@@ -78,6 +78,8 @@ func _loseLife(name):
 	# get_tree().reload_current_scene()
 
 func kill(enemy):
-	if motion.y > 0:
-		motion.y = jumpHeight
-		enemy.loseLife()
+	motion.y = jumpHeight
+	enemy.loseLife()
+
+func isAbove(enemy):
+	return position.y < enemy.position.y

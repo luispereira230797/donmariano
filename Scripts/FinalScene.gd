@@ -16,7 +16,7 @@ var dialog = [
 		"character": "CharacterWorried"
 	},
 	{
-		"text": "Perdí el bus y bueno, casi muero ahi con los asaltos y eso",
+		"text": "Pasaron muchas cosas en el camino y casi muero ahi con los asaltos y eso",
 		"wife": "WifeNeutral",
 		"character": "CharacterWorried"
 	},

@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://assets/sprites/enemydrogadictosprite1.png" type="Texture" id=1]
 [ext_resource path="res://Scripts/Enemy.gd" type="Script" id=2]
@@ -6,7 +6,7 @@
 [sub_resource type="Animation" id=2]
 resource_name = "Idle"
 tracks/0/type = "value"
-tracks/0/path = NodePath("Sprite:frame")
+tracks/0/path = NodePath("Container/Sprite:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
@@ -21,7 +21,7 @@ tracks/0/keys = {
 [sub_resource type="Animation" id=3]
 length = 0.001
 tracks/0/type = "value"
-tracks/0/path = NodePath("Sprite:frame")
+tracks/0/path = NodePath("Container/Sprite:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
@@ -38,7 +38,7 @@ resource_name = "Walk"
 length = 0.4
 loop = true
 tracks/0/type = "value"
-tracks/0/path = NodePath("Sprite:frame")
+tracks/0/path = NodePath("Container/Sprite:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
@@ -51,17 +51,36 @@ tracks/0/keys = {
 }
 
 [sub_resource type="RectangleShape2D" id=5]
-extents = Vector2( 28.5, 69.5 )
+extents = Vector2( 30.5, 60.125 )
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 24, 67 )
+extents = Vector2( 24, 63.5 )
+
+[sub_resource type="RectangleShape2D" id=6]
+extents = Vector2( 30, 8.25 )
 
 [node name="Enemy" type="KinematicBody2D"]
 script = ExtResource( 2 )
 
-[node name="Sprite" type="Sprite" parent="."]
-position = Vector2( 4.48788, -4.49747 )
-scale = Vector2( -0.310675, 0.310675 )
+[node name="Container" type="Node2D" parent="."]
+
+[node name="RayCastBottom" type="RayCast2D" parent="Container"]
+position = Vector2( -44, -64 )
+enabled = true
+cast_to = Vector2( 0, 142 )
+collision_mask = 4
+
+[node name="RayCastForward" type="RayCast2D" parent="Container"]
+position = Vector2( -41, 60 )
+enabled = true
+cast_to = Vector2( -15, 0 )
+collision_mask = 4
+collide_with_areas = true
+
+[node name="Sprite" type="Sprite" parent="Container"]
+position = Vector2( 8.48788, -4.49747 )
+rotation = 3.14159
+scale = Vector2( 0.310675, -0.310675 )
 texture = ExtResource( 1 )
 hframes = 2
 
@@ -76,24 +95,19 @@ collision_layer = 5
 collision_mask = 5
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-position = Vector2( -1.5, -5.5 )
+position = Vector2( -0.5, 3.125 )
 shape = SubResource( 5 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( 0, -4 )
+position = Vector2( 0, -0.5 )
 shape = SubResource( 1 )
 
-[node name="RayCastBottom" type="RayCast2D" parent="."]
-position = Vector2( -44, -64 )
-enabled = true
-cast_to = Vector2( 0, 142 )
-collision_mask = 4
+[node name="Area2D2" type="Area2D" parent="."]
+collision_layer = 16
 
-[node name="RayCastForward" type="RayCast2D" parent="."]
-position = Vector2( -41, 60 )
-enabled = true
-cast_to = Vector2( -15, 0 )
-collision_mask = 4
-collide_with_areas = true
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D2"]
+position = Vector2( 0, -66.25 )
+shape = SubResource( 6 )
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_Area2D_body_entered"]
+[connection signal="body_entered" from="Area2D2" to="." method="_on_Area2D2_body_entered"]

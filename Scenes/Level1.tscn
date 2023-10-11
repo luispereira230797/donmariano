@@ -426,7 +426,7 @@ position = Vector2( 15376, -481 )
 type = 2
 
 [node name="Player" parent="." instance=ExtResource( 1 )]
-position = Vector2( 16024, -139 )
+position = Vector2( -810, 459 )
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
 position = Vector2( 140, 24 )
@@ -528,13 +528,17 @@ shape = SubResource( 15 )
 position = Vector2( 389.272, -18.3495 )
 shape = SubResource( 15 )
 
-[node name="Sprite2" type="Sprite" parent="."]
+[node name="Building2" type="Sprite" parent="."]
 position = Vector2( 16629, -459 )
 scale = Vector2( 0.762963, 0.762963 )
 texture = ExtResource( 4 )
 
-[node name="StaticBody2D" type="StaticBody2D" parent="Sprite2"]
+[node name="Area2D" type="Area2D" parent="."]
+position = Vector2( 16629, -459 )
+scale = Vector2( 0.762963, 0.762963 )
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2/StaticBody2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 position = Vector2( -326.359, 211.675 )
 shape = SubResource( 15 )
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_Area2D_body_entered"]
