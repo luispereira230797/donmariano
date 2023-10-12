@@ -83,3 +83,9 @@ func kill(enemy):
 
 func isAbove(enemy):
 	return position.y < enemy.position.y
+
+func stopFollowCamera():
+	$Camera2D.current = false
+
+func followCamera():
+	$Camera2D.current = true

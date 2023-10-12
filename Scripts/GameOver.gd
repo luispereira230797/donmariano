@@ -9,7 +9,7 @@ extends Node2D
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	$AnimationPlayer.play("GameOver")
-	$GameOver.visible = false
+	$GameOverMessage.visible = false
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -18,4 +18,4 @@ func _ready():
 
 
 func _on_AnimationPlayer_animation_finished(anim_name):
-	$GameOver.visible = true
+	$GameOverMessage.visible = true

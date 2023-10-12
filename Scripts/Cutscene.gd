@@ -33,7 +33,7 @@ func _on_DialogBox_next():
 		add_child(itemsSelectorScene)
 	elif die:
 		$AnimationPlayer.play("GameOverDrogadicto")
-		Global.gameOver()
+		Global.dieAssaulted()
 	else:
 		$DialogBox.setText("¡Ah no tenés nada! ¡Entonces me llevo tu vida!")
 		die = true

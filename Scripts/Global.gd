@@ -7,6 +7,10 @@ var text = ""
 var itemSelected = false
 var lastCheckPoint = null
 
+var gameOverFinalText = ""
+var gameOverMessage = ""
+var gameOverText = ""
+
 func die(textCinematic):
 	itemSelected = false
 	current_scene = "KilledByDrogadicto"
@@ -24,9 +28,6 @@ func callCinematic(newText):
 
 func back():
 	get_tree().change_scene("res://Scenes/Level1.tscn")
-
-func gameOver():
-	get_tree().change_scene("res://Scenes/GameOver.tscn")
 
 func getFinal():
 	#Dinero si, Anillo si, Celular si
@@ -69,3 +70,14 @@ func getFinal():
 	#Llega preocupado porque no tiene dinero ni celular, su esposa lo abraza y dice que saldrán de eso, tal vez vendiendo el anillo aunque es muy importante.
 	elif items.find("cash") == -1 && items.find("ring") != -1 && items.find("phone") == -1:
 		return "final8"
+
+func dieAssaulted():
+	gameOverMessage = "YA NO TENÍAS NADA PARA LOS DELINCUENTES, ENTONCES TE MATARON"
+	gameOverFinalText = "Final 2/10"
+	gameOverText = "FINAL POR ASALTO"
+	get_tree().change_scene("res://Scenes/GameOver.tscn")
+
+func dieByFall():
+	gameOverMessage = "CAÍSTE DESDE MUY ALTO Y SE ROMPIERON TODOS TUS HUESOS"
+	gameOverFinalText = "Final 1/10"
+	gameOverText = "FINAL POR CAÍDA"

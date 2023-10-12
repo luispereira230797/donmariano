@@ -1,0 +1,47 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Fonts/Product Sans Bold.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://Scripts/GameOverMessage.gd" type="Script" id=2]
+
+[sub_resource type="DynamicFont" id=1]
+size = 32
+outline_size = 4
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 72
+outline_size = 4
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 1 )
+
+[node name="GameOverMessage" type="CanvasLayer"]
+script = ExtResource( 2 )
+
+[node name="LabelMessage" type="Label" parent="."]
+margin_left = 44.0
+margin_top = 26.0
+margin_right = 1231.0
+margin_bottom = 110.0
+custom_fonts/font = SubResource( 1 )
+text = "CAÍSTE DESDE MUY ALTO Y SE ROMPIERON TODOS TUS HUESOS"
+align = 1
+
+[node name="LabelFinalText" type="Label" parent="."]
+margin_left = 42.0
+margin_top = 71.0
+margin_right = 1229.0
+margin_bottom = 155.0
+custom_fonts/font = SubResource( 1 )
+text = "Final 1/10"
+align = 1
+
+[node name="LabelGameOver" type="Label" parent="."]
+margin_left = 42.0
+margin_top = 619.0
+margin_right = 1229.0
+margin_bottom = 703.0
+custom_colors/font_color = Color( 1, 0, 0, 1 )
+custom_fonts/font = SubResource( 2 )
+text = "FIN DEL JUEGO"
+align = 1
