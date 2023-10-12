@@ -1,10 +1,11 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://assets/sprites/boxdialog1.png" type="Texture" id=1]
 [ext_resource path="res://assets/sprites/boxdialog2.png" type="Texture" id=2]
 [ext_resource path="res://Scripts/Dialog.gd" type="Script" id=3]
 [ext_resource path="res://Fonts/Product Sans Bold.ttf" type="DynamicFontData" id=4]
 [ext_resource path="res://assets/sprites/continueicon.png" type="Texture" id=5]
+[ext_resource path="res://assets/sprites/minidonmario.png" type="Texture" id=6]
 
 [sub_resource type="Animation" id=1]
 resource_name = "Intro"
@@ -119,6 +120,30 @@ tracks/4/keys = {
 "update": 0,
 "values": [ 0.0 ]
 }
+tracks/5/type = "value"
+tracks/5/path = NodePath("TalkerIcon:rotation_degrees")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 14.8542 ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("TalkerIcon:position")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 172, 561 ) ]
+}
 
 [sub_resource type="Animation" id=4]
 resource_name = "SetText"
@@ -140,6 +165,62 @@ size = 25
 font_data = ExtResource( 4 )
 
 [sub_resource type="StyleBoxEmpty" id=5]
+
+[sub_resource type="Animation" id=7]
+resource_name = "Loop"
+length = 0.8
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("TalkerIcon:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 172, 561 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("TalkerIcon:rotation_degrees")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.4, 0.8 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ 14.8542, -17.9, 14.8542 ]
+}
+
+[sub_resource type="Animation" id=8]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("TalkerIcon:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 172, 561 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("TalkerIcon:rotation_degrees")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 14.8542 ]
+}
 
 [node name="CanvasLayer" type="CanvasLayer"]
 pause_mode = 2
@@ -179,6 +260,16 @@ rect_scale = Vector2( 0.3, 0.3 )
 custom_styles/focus = SubResource( 5 )
 icon = ExtResource( 5 )
 flat = true
+
+[node name="TalkerIcon" type="Sprite" parent="."]
+position = Vector2( 172, 561 )
+rotation = 0.259255
+scale = Vector2( 0.164989, 0.164989 )
+texture = ExtResource( 6 )
+
+[node name="TalkerAnimation" type="AnimationPlayer" parent="."]
+anims/Loop = SubResource( 7 )
+anims/RESET = SubResource( 8 )
 
 [connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_AnimationPlayer_animation_finished"]
 [connection signal="pressed" from="ContinueButton" to="." method="_on_ContinueButton_pressed"]

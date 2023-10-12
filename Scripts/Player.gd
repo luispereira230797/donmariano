@@ -74,7 +74,9 @@ func _physics_process(delta):
 	motion = move_and_slide(motion, up)
 
 func _loseLife(name):
-	Global.die("¡Esto es un asalto Don! ¡Arriba las manos y dame lo que tengas carajo!")
+	Global.cutsceneFirstText = "¡Esto es un asalto Don! ¡Arriba las manos y dame lo que tengas carajo!"
+	Global.cutsceneFirstIcon = Global.miniDrogadicto
+	Global.die()
 	# get_tree().reload_current_scene()
 
 func kill(enemy):

@@ -20,5 +20,4 @@ func _on_Area2D_body_entered(body):
 	if body.get_name() == "Player" && !checked:
 		checked = true
 		Global.lastCheckPoint = position
-		print($CheckpointSprite.texture)
 		$CheckpointSprite.texture = load("res://assets/sprites/checkpointchecked.png")

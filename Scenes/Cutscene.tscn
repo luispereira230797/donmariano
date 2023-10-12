@@ -471,5 +471,3 @@ texture = ExtResource( 5 )
 
 [connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_AnimationPlayer_animation_finished"]
 [connection signal="next" from="DialogBox" to="." method="_on_DialogBox_next"]
-
-[editable path="DialogBox"]

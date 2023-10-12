@@ -63,4 +63,6 @@ func _on_Button_focus_exited(button):
 
 func _on_AcceptButton_pressed():
 	Global.select(selected)
-	Global.callCinematic("¡Eso me sirve! ¡Nos vemos mañana Don!")
+	Global.cutsceneFirstText = "¡Eso me sirve! ¡Nos vemos mañana Don!"
+	Global.cutsceneFirstIcon = Global.miniDrogadicto
+	Global.callCinematic()

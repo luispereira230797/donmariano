@@ -9,6 +9,12 @@ var lastCheckPoint = null
 var gameOverFinalText = ""
 var gameOverMessage = ""
 var gameOverText = ""
+var cutsceneFirstText = ""
+var cutsceneFirstIcon = ""
+
+const miniDonMario = "res://assets/sprites/minidonmario.png"
+const miniDrogadicto = "res://assets/sprites/minidrogadicto.png"
+const miniWife = "res://assets/sprites/miniwife.png"
 
 func reset():
 	items = ["cash", "ring", "phone"] #["cash", "ring", "phone"]
@@ -21,10 +27,10 @@ func reset():
 	gameOverMessage = ""
 	gameOverText = ""
 
-func die(textCinematic):
+func die():
 	itemSelected = false
 	current_scene = "KilledByDrogadicto"
-	callCinematic(textCinematic)
+	callCinematic()
 
 func select(item):
 	var pos = items.find(item)
@@ -32,8 +38,7 @@ func select(item):
 	current_scene = "ItemSelected"
 	itemSelected = true
 
-func callCinematic(newText):
-	text = newText
+func callCinematic():
 	get_tree().change_scene("res://Scenes/Cutscene.tscn")
 
 func back():
