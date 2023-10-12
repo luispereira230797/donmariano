@@ -1,15 +1,25 @@
 extends Node
 
-var items = ["cash", "ring", "phone"] #["cash", "ring", "phone"]
+var items = ["cash", "ring", "phone"]
 var current_scene = "KilledByDrogadicto"
 var previous_scene = null
 var text = ""
 var itemSelected = false
 var lastCheckPoint = null
-
 var gameOverFinalText = ""
 var gameOverMessage = ""
 var gameOverText = ""
+
+func reset():
+	items = ["cash", "ring", "phone"] #["cash", "ring", "phone"]
+	current_scene = "KilledByDrogadicto"
+	previous_scene = null
+	text = ""
+	itemSelected = false
+	lastCheckPoint = null
+	gameOverFinalText = ""
+	gameOverMessage = ""
+	gameOverText = ""
 
 func die(textCinematic):
 	itemSelected = false
@@ -81,3 +91,7 @@ func dieByFall():
 	gameOverMessage = "CAÍSTE DESDE MUY ALTO Y SE ROMPIERON TODOS TUS HUESOS"
 	gameOverFinalText = "Final 1/10"
 	gameOverText = "FINAL POR CAÍDA"
+
+func retry():
+	reset()
+	get_tree().change_scene("res://Scenes/Level1.tscn")

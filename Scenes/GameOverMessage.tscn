@@ -1,17 +1,18 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Fonts/Product Sans Bold.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://Scripts/GameOverMessage.gd" type="Script" id=2]
+[ext_resource path="res://Scenes/BaseButton.tscn" type="PackedScene" id=3]
 
 [sub_resource type="DynamicFont" id=1]
 size = 32
-outline_size = 4
+outline_size = 2
 outline_color = Color( 0, 0, 0, 1 )
 font_data = ExtResource( 1 )
 
 [sub_resource type="DynamicFont" id=2]
 size = 72
-outline_size = 4
+outline_size = 3
 outline_color = Color( 0, 0, 0, 1 )
 font_data = ExtResource( 1 )
 
@@ -28,10 +29,10 @@ text = "CAÍSTE DESDE MUY ALTO Y SE ROMPIERON TODOS TUS HUESOS"
 align = 1
 
 [node name="LabelFinalText" type="Label" parent="."]
-margin_left = 42.0
-margin_top = 71.0
-margin_right = 1229.0
-margin_bottom = 155.0
+margin_left = 34.0
+margin_top = 67.0
+margin_right = 1221.0
+margin_bottom = 119.0
 custom_fonts/font = SubResource( 1 )
 text = "Final 1/10"
 align = 1
@@ -45,3 +46,9 @@ custom_colors/font_color = Color( 1, 0, 0, 1 )
 custom_fonts/font = SubResource( 2 )
 text = "FIN DEL JUEGO"
 align = 1
+
+[node name="BaseButton" parent="." instance=ExtResource( 3 )]
+margin_right = 778.0
+margin_bottom = 603.0
+
+[connection signal="pressed" from="BaseButton" to="." method="_on_BaseButton_pressed"]

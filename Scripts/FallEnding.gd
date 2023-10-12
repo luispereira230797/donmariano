@@ -8,7 +8,6 @@ extends Node2D
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	$GameOverMessage.visible = false
 	$AnimationPlayer.play("Intro")
 
 
@@ -19,4 +18,6 @@ func _ready():
 
 func _on_AnimationPlayer_animation_finished(anim_name):
 	if anim_name == "Intro":
+		var gameOverMessage = load("res://Scenes/GameOverMessage.tscn")
+		add_child(gameOverMessage.instance())
 		$GameOverMessage.visible = true
