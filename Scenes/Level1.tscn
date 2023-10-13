@@ -445,7 +445,7 @@ tile_data = PoolIntArray( -1506542, 4, 0, -1506400, 4, 0, -1375328, 2, 0, -13753
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="Player" parent="." instance=ExtResource( 1 )]
-position = Vector2( 2417, 795 )
+position = Vector2( 2382, 835 )
 
 [node name="ParallaxBackground4" type="ParallaxBackground" parent="."]
 layer = -98
@@ -556,4 +556,8 @@ position = Vector2( 11736, 319 )
 stream = ExtResource( 5 )
 volume_db = -8.0
 
+[connection signal="dieByFall" from="DeathByFall" to="." method="_on_DeathByFall_dieByFall"]
 [connection signal="body_entered" from="Area2D" to="." method="_on_Area2D_body_entered"]
+[connection signal="dieByFall" from="DeathByFall2" to="." method="_on_DeathByFall2_dieByFall"]
+[connection signal="dieByFall" from="DeathByFall3" to="." method="_on_DeathByFall3_dieByFall"]
+[connection signal="dieByFall" from="DeathByFall4" to="." method="_on_DeathByFall4_dieByFall"]

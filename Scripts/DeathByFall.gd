@@ -6,6 +6,7 @@ extends Area2D
 # var b = "text"
 var timer = Timer.new()
 var player = null
+signal dieByFall()
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -27,6 +28,8 @@ func _on_DeathByFall_body_entered(body):
 		timer.start()
 		player = body
 		Global.dieByFall()
+		$AudioStreamPlayer.play()
+		emit_signal("dieByFall")
 
 func changeScene():
 	get_tree().change_scene("res://Scenes/FallEnding.tscn")

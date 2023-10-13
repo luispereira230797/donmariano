@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/FallSound-WilheimScream.mp3-2fdc492d7463cc73a741f323bc4d9df3.mp3str"
+
+[deps]
+
+source_file="res://Sounds/FallSound-WilheimScream.mp3"
+dest_files=[ "res://.import/FallSound-WilheimScream.mp3-2fdc492d7463cc73a741f323bc4d9df3.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

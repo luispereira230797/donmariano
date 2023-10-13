@@ -23,3 +23,19 @@ func _ready():
 func _on_Area2D_body_entered(body):
 	if body.get_name() == "Player":
 		get_tree().change_scene("res://Scenes/FinalScene.tscn")
+
+
+func _on_DeathByFall_dieByFall():
+	$AudioStreamPlayer.stop()
+
+
+func _on_DeathByFall2_dieByFall():
+	$AudioStreamPlayer.stop()
+
+
+func _on_DeathByFall3_dieByFall():
+	$AudioStreamPlayer.stop()
+
+
+func _on_DeathByFall4_dieByFall():
+	$AudioStreamPlayer.stop()
