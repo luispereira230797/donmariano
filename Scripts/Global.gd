@@ -1,6 +1,6 @@
 extends Node
 
-var items = ["cash", "ring", "phone"]
+var items = ["ring", "cash"]
 var current_scene = "KilledByDrogadicto"
 var previous_scene = null
 var text = ""
@@ -9,6 +9,7 @@ var lastCheckPoint = null
 var gameOverFinalText = ""
 var gameOverMessage = ""
 var gameOverText = ""
+var gameOverFinalColor = "ff0000"
 var cutsceneFirstText = ""
 var cutsceneFirstIcon = ""
 
@@ -19,6 +20,7 @@ const miniWife = "res://assets/sprites/miniwife.png"
 func reset():
 	items = ["cash", "ring", "phone"] #["cash", "ring", "phone"]
 	current_scene = "KilledByDrogadicto"
+	gameOverFinalColor = "ff0000"
 	previous_scene = null
 	text = ""
 	itemSelected = false
@@ -97,6 +99,44 @@ func dieByFall():
 	gameOverFinalText = "Final 1/10"
 	gameOverText = "FINAL POR CAÍDA"
 
+func final():
+	var final = getFinal()
+	if final == "final1":
+		gameOverMessage = "Llegaste a casa con todas tus cosas y te llaman aceptandote un trabajo que \n paga mejor, tu esposa se puso de buen humor."
+		gameOverFinalText = "Final 3/10"
+		gameOverText = "FINAL PERFECTO"
+	elif final == "final2":
+		gameOverMessage = "Llegaste feliz porque podrás pagar la hipoteca a tiempo y tienes \n una linda cena con tu esposa."
+		gameOverFinalText = "Final 4/10"
+		gameOverText = "FINAL FELIZ"
+	elif final == "final3":
+		gameOverMessage = "Llegaste sin el anillo de casamiento y tu esposa se enoja, sin embargo recibes \n una llamada en la que te aceptan en un trabajo que paga mejor, festejan eso."
+		gameOverFinalText = "Final 5/10"
+		gameOverText = "FINAL SAFANDO"
+	elif final == "final4":
+		gameOverMessage = "Llegaste sin el anillo de casamiento y sin tu celular pero si con el dinero para \n pagar la hipoteca, tu esposa se enoja y te deja cenando solo."
+		gameOverFinalText = "Final 6/10"
+		gameOverText = "FINAL SOLITARIO"
+	elif final == "final5":
+		gameOverMessage = "Llegaste sin nada, tu esposa se decepciona y te abandona \n haces algo irreversible..."
+		gameOverFinalText = "Final 7/10"
+		gameOverText = "BAD ENDING"
+	elif final == "final6":
+		gameOverMessage = "Llegas preocupado porque no tienes el dinero para pagar la hipoteca, sin \n embargo recibes una llamada en la que te aceptan un trabajo que paga mejor, festejan eso."
+		gameOverFinalText = "Final 8/10"
+		gameOverText = "FINAL FELIZ ALTERNATIVO"
+	elif final == "final7":
+		gameOverMessage = "Llegas preocupado porque no tienes el dinero para la hipoteca, tu esposa \n se enoja porque no tienes el anillo, te llaman aceptándote un trabajo que \n paga mejor, tu esposa te felicita fríamente y te deja cenando solo."
+		gameOverFinalText = "Final 9/10"
+		gameOverText = "FINAL SOLITARIO ALTERNATIVO"
+	elif final == "final8":
+		gameOverMessage = "Llegas preocupado porque te robaron todo menos el anillo, tu esposa \n te consuela y cenan preocupados."
+		gameOverFinalText = "Final 10/10"
+		gameOverText = "FINAL CONSUELO"
+
 func retry():
 	reset()
 	get_tree().change_scene("res://Scenes/Level1.tscn")
+
+func setGoodEndingColor():
+	gameOverFinalColor = "00ff16"

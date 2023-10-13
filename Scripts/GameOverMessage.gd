@@ -10,6 +10,7 @@ func _ready():
 	$LabelMessage.text = Global.gameOverMessage
 	$LabelGameOver.text = Global.gameOverText
 	$LabelFinalText.text = Global.gameOverFinalText
+	$LabelGameOver.add_color_override("font_color", Global.gameOverFinalColor)
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

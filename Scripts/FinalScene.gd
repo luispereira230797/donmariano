@@ -520,7 +520,6 @@ func _ready():
 	elif final == "final8":
 		dialog.append_array(final8)
 
-
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):
 #	pass
@@ -539,7 +538,9 @@ func _on_DialogBox_next():
 		set_expressions(pos)
 		pos+=1
 	else:
-		pass
+		Global.setGoodEndingColor()
+		Global.final()
+		get_tree().change_scene("res://Scenes/EndingScene.tscn")
 
 func set_expressions(pos):
 	$CharacterHappy.visible = false

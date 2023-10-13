@@ -5,7 +5,7 @@
 [ext_resource path="res://Scenes/BaseButton.tscn" type="PackedScene" id=3]
 
 [sub_resource type="DynamicFont" id=1]
-size = 32
+size = 28
 outline_size = 2
 outline_color = Color( 0, 0, 0, 1 )
 font_data = ExtResource( 1 )
@@ -21,28 +21,28 @@ script = ExtResource( 2 )
 
 [node name="LabelMessage" type="Label" parent="."]
 margin_left = 44.0
-margin_top = 26.0
+margin_top = 14.0
 margin_right = 1231.0
-margin_bottom = 110.0
+margin_bottom = 98.0
 custom_fonts/font = SubResource( 1 )
 text = "CAÍSTE DESDE MUY ALTO Y SE ROMPIERON TODOS TUS HUESOS"
 align = 1
 
 [node name="LabelFinalText" type="Label" parent="."]
-margin_left = 34.0
-margin_top = 67.0
-margin_right = 1221.0
-margin_bottom = 119.0
+margin_left = 536.0
+margin_top = 675.0
+margin_right = 739.0
+margin_bottom = 735.0
 custom_fonts/font = SubResource( 1 )
 text = "Final 1/10"
 align = 1
 
 [node name="LabelGameOver" type="Label" parent="."]
-margin_left = 42.0
-margin_top = 619.0
-margin_right = 1229.0
-margin_bottom = 703.0
-custom_colors/font_color = Color( 1, 0, 0, 1 )
+margin_left = 40.0
+margin_top = 597.0
+margin_right = 1227.0
+margin_bottom = 686.0
+custom_colors/font_color = Color( 0, 1, 0.0862745, 1 )
 custom_fonts/font = SubResource( 2 )
 text = "FIN DEL JUEGO"
 align = 1

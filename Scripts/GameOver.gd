@@ -19,4 +19,3 @@ func _ready():
 func _on_AnimationPlayer_animation_finished(anim_name):
 	var gameOverMessage = load("res://Scenes/GameOverMessage.tscn")
 	add_child(gameOverMessage.instance())
-	$GameOverMessage.visible = true
