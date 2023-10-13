@@ -79,6 +79,7 @@ extents = Vector2( 22, 4 )
 extents = Vector2( 17.5, 3.5 )
 
 [node name="Player" type="KinematicBody2D"]
+moving_platform_apply_velocity_on_leave = 2
 script = ExtResource( 2 )
 
 [node name="Camera2D" type="Camera2D" parent="."]
