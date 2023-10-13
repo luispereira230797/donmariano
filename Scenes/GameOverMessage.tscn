@@ -38,10 +38,10 @@ text = "Final 1/10"
 align = 1
 
 [node name="LabelGameOver" type="Label" parent="."]
-margin_left = 40.0
-margin_top = 597.0
-margin_right = 1227.0
-margin_bottom = 686.0
+margin_left = 42.0
+margin_top = 481.0
+margin_right = 1229.0
+margin_bottom = 570.0
 custom_colors/font_color = Color( 0, 1, 0.0862745, 1 )
 custom_fonts/font = SubResource( 2 )
 text = "FIN DEL JUEGO"

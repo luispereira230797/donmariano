@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/NoDestination.mp3-52fb31f8258cda60b0105a6ab3a83fec.mp3str"
+
+[deps]
+
+source_file="res://Sounds/EndingMusics/NoDestination.mp3"
+dest_files=[ "res://.import/NoDestination.mp3-52fb31f8258cda60b0105a6ab3a83fec.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

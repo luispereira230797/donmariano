@@ -11,6 +11,8 @@ func _ready():
 	var ending = getEnding()
 	get_node(ending).visible = true
 	$AnimationPlayer.play(ending)
+	$AudioStreamPlayer.stream = load(Global.gameOverMusic)
+	$AudioStreamPlayer.play()
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

@@ -491,4 +491,6 @@ anims/Ending7 = SubResource( 8 )
 anims/Ending8 = SubResource( 9 )
 anims/RESET = SubResource( 2 )
 
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+
 [connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_AnimationPlayer_animation_finished"]

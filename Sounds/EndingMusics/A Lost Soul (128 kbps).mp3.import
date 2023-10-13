@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/A Lost Soul (128 kbps).mp3-10af3107d05dc34fadf81542d92a9288.mp3str"
+
+[deps]
+
+source_file="res://Sounds/EndingMusics/A Lost Soul (128 kbps).mp3"
+dest_files=[ "res://.import/A Lost Soul (128 kbps).mp3-10af3107d05dc34fadf81542d92a9288.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

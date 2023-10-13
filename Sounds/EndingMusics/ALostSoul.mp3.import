@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/ALostSoul.mp3-90ce0c7bde47699b51beed6a017283a3.mp3str"
+
+[deps]
+
+source_file="res://Sounds/EndingMusics/ALostSoul.mp3"
+dest_files=[ "res://.import/ALostSoul.mp3-90ce0c7bde47699b51beed6a017283a3.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

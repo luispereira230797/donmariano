@@ -1,6 +1,13 @@
 extends Node
 
-var items = ["cash", "ring", "phone"]
+const miniDonMario = "res://assets/sprites/minidonmario.png"
+const miniDrogadicto = "res://assets/sprites/minidrogadicto.png"
+const miniWife = "res://assets/sprites/miniwife.png"
+const MUSIC_ROSE_GARDEN = "res://Sounds/EndingMusics/RoseGarden.mp3"
+const MUSIC_NO_DESTINATION = "res://Sounds/EndingMusics/NoDestination.mp3"
+const MUSIC_A_LOST_SOUL = "res://Sounds/EndingMusics/ALostSoul.mp3"
+
+var items = []
 var current_scene = "KilledByDrogadicto"
 var previous_scene = null
 var text = ""
@@ -10,12 +17,9 @@ var gameOverFinalText = ""
 var gameOverMessage = ""
 var gameOverText = ""
 var gameOverFinalColor = "ff0000"
+var gameOverMusic = MUSIC_ROSE_GARDEN
 var cutsceneFirstText = ""
 var cutsceneFirstIcon = ""
-
-const miniDonMario = "res://assets/sprites/minidonmario.png"
-const miniDrogadicto = "res://assets/sprites/minidrogadicto.png"
-const miniWife = "res://assets/sprites/miniwife.png"
 
 func reset():
 	items = ["cash", "ring", "phone"] #["cash", "ring", "phone"]
@@ -28,6 +32,7 @@ func reset():
 	gameOverFinalText = ""
 	gameOverMessage = ""
 	gameOverText = ""
+	gameOverMusic = MUSIC_ROSE_GARDEN
 
 func die():
 	itemSelected = false
@@ -105,34 +110,42 @@ func final():
 		gameOverMessage = "Llegaste a casa con todas tus cosas y te llaman aceptandote un trabajo que \n paga mejor, tu esposa se puso de buen humor."
 		gameOverFinalText = "Final 3/10"
 		gameOverText = "FINAL PERFECTO"
+		gameOverMusic = MUSIC_ROSE_GARDEN
 	elif final == "final2":
 		gameOverMessage = "Llegaste feliz porque podrás pagar la hipoteca a tiempo y tienes \n una linda cena con tu esposa."
 		gameOverFinalText = "Final 4/10"
 		gameOverText = "FINAL FELIZ"
+		gameOverMusic = MUSIC_ROSE_GARDEN
 	elif final == "final3":
 		gameOverMessage = "Llegaste sin el anillo de casamiento y tu esposa se enoja, sin embargo recibes \n una llamada en la que te aceptan en un trabajo que paga mejor, festejan eso."
 		gameOverFinalText = "Final 5/10"
 		gameOverText = "FINAL SAFANDO"
+		gameOverMusic = MUSIC_ROSE_GARDEN
 	elif final == "final4":
 		gameOverMessage = "Llegaste sin el anillo de casamiento y sin tu celular pero si con el dinero para \n pagar la hipoteca, tu esposa se enoja y te deja cenando solo."
 		gameOverFinalText = "Final 6/10"
 		gameOverText = "FINAL SOLITARIO"
+		gameOverMusic = MUSIC_NO_DESTINATION
 	elif final == "final5":
 		gameOverMessage = "Llegaste sin nada, tu esposa se decepciona y te abandona \n haces algo irreversible..."
 		gameOverFinalText = "Final 7/10"
 		gameOverText = "BAD ENDING"
+		gameOverMusic = MUSIC_A_LOST_SOUL
 	elif final == "final6":
 		gameOverMessage = "Llegas preocupado porque no tienes el dinero para pagar la hipoteca, sin \n embargo recibes una llamada en la que te aceptan un trabajo que paga mejor, festejan eso."
 		gameOverFinalText = "Final 8/10"
 		gameOverText = "FINAL FELIZ ALTERNATIVO"
+		gameOverMusic = MUSIC_ROSE_GARDEN
 	elif final == "final7":
 		gameOverMessage = "Llegas preocupado porque no tienes el dinero para la hipoteca, tu esposa \n se enoja porque no tienes el anillo, te llaman aceptándote un trabajo que \n paga mejor, tu esposa te felicita fríamente y te deja cenando solo."
 		gameOverFinalText = "Final 9/10"
 		gameOverText = "FINAL SOLITARIO ALTERNATIVO"
+		gameOverMusic = MUSIC_NO_DESTINATION
 	elif final == "final8":
 		gameOverMessage = "Llegas preocupado porque te robaron todo menos el anillo, tu esposa \n te consuela y cenan preocupados."
 		gameOverFinalText = "Final 10/10"
 		gameOverText = "FINAL CONSUELO"
+		gameOverMusic = MUSIC_ROSE_GARDEN
 
 func retry():
 	reset()

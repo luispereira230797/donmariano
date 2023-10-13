@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Pix - Rose Garden (128 kbps).mp3-a1383df3e12cf0bceb7427bb97011652.mp3str"
+
+[deps]
+
+source_file="res://Sounds/EndingMusics/Pix - Rose Garden (128 kbps).mp3"
+dest_files=[ "res://.import/Pix - Rose Garden (128 kbps).mp3-a1383df3e12cf0bceb7427bb97011652.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

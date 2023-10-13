@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/RoseGarden.mp3-b0a904b3b8a32d74914dbd3e094843c8.mp3str"
+
+[deps]
+
+source_file="res://Sounds/EndingMusics/RoseGarden.mp3"
+dest_files=[ "res://.import/RoseGarden.mp3-b0a904b3b8a32d74914dbd3e094843c8.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0
