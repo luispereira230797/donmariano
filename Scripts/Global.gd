@@ -1,6 +1,6 @@
 extends Node
 
-var items = ["ring", "cash"]
+var items = ["cash", "ring", "phone"]
 var current_scene = "KilledByDrogadicto"
 var previous_scene = null
 var text = ""

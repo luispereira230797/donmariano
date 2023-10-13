@@ -10,6 +10,7 @@ onready var sprite = $Sprite
 var timeInAir = 0
 var movingRight = false
 var movingLeft = false
+var jumping = false
 
 var motion = Vector2()
 
@@ -55,6 +56,10 @@ func _physics_process(delta):
 		friction = true
 	# If is pressing jump button and is in the limit of time, jump
 	if Input.is_action_pressed("ui_up"):
+		# Play jump sound
+		if !jumping:
+			$JumpSoundPlayer.play()
+			jumping = true
 		if $RayCast2DBottom.is_colliding() || $RayCast2DBottom2.is_colliding():
 			motion.y = jumpHeight
 		elif timeInAir < 0.25:
@@ -82,6 +87,7 @@ func _loseLife(name):
 func kill(enemy):
 	motion.y = jumpHeight
 	enemy.loseLife()
+	$KillSoundPlayer.play()
 
 func isAbove(enemy):
 	return position.y < enemy.position.y
@@ -91,3 +97,7 @@ func stopFollowCamera():
 
 func followCamera():
 	$Camera2D.current = true
+
+func _on_JumpSoundArea2D_body_entered(body):
+	if body.get_name() != "Player":
+		jumping = false

@@ -1,9 +1,10 @@
-[gd_scene load_steps=30 format=2]
+[gd_scene load_steps=31 format=2]
 
 [ext_resource path="res://Scenes/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://assets/tilesets/level1tileset.png" type="Texture" id=2]
 [ext_resource path="res://Scenes/Enemy.tscn" type="PackedScene" id=3]
 [ext_resource path="res://assets/sprites/level1building.png" type="Texture" id=4]
+[ext_resource path="res://Sounds/BackgroundMusic.mp3" type="AudioStream" id=5]
 [ext_resource path="res://assets/sprites/backgroundsky.png" type="Texture" id=6]
 [ext_resource path="res://Scripts/Level1.gd" type="Script" id=7]
 [ext_resource path="res://assets/sprites/backgroundmountains.png" type="Texture" id=8]
@@ -550,5 +551,9 @@ position = Vector2( 9311, 1386 )
 
 [node name="DeathByFall4" parent="." instance=ExtResource( 13 )]
 position = Vector2( 11736, 319 )
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 5 )
+volume_db = -10.0
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_Area2D_body_entered"]

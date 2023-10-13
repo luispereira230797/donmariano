@@ -12,6 +12,7 @@ func _ready():
 		$Player.position = Global.lastCheckPoint
 	else:
 		Global.lastCheckPoint = $Player.position
+	$AudioStreamPlayer.play()
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

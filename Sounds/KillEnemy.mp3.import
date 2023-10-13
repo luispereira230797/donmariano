@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/KillEnemy.mp3-ec1059ff2efd65bc205c664ecac8c6ff.mp3str"
+
+[deps]
+
+source_file="res://Sounds/KillEnemy.mp3"
+dest_files=[ "res://.import/KillEnemy.mp3-ec1059ff2efd65bc205c664ecac8c6ff.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

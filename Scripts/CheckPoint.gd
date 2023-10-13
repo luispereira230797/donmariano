@@ -18,6 +18,7 @@ func _ready():
 
 func _on_Area2D_body_entered(body):
 	if body.get_name() == "Player" && !checked:
+		$AudioStreamPlayer.play()
 		checked = true
 		Global.lastCheckPoint = position
 		$CheckpointSprite.texture = load("res://assets/sprites/checkpointchecked.png")
