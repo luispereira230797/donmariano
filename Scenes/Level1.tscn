@@ -445,7 +445,7 @@ tile_data = PoolIntArray( -1506542, 4, 0, -1506400, 4, 0, -1375328, 2, 0, -13753
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="Player" parent="." instance=ExtResource( 1 )]
-position = Vector2( 4671, 794 )
+position = Vector2( 16170, -117 )
 
 [node name="ParallaxBackground4" type="ParallaxBackground" parent="."]
 layer = -98
