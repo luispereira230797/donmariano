@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/BackgroundAsalto-8bit Syndrome _ 8bit Horror - COPYRIGHT FREE MUSIC (128 kbps).mp3-93bcb175b5a3aa34548f3aa5a8647cce.mp3str"
+
+[deps]
+
+source_file="res://Sounds/BackgroundAsalto-8bit Syndrome _ 8bit Horror - COPYRIGHT FREE MUSIC (128 kbps).mp3"
+dest_files=[ "res://.import/BackgroundAsalto-8bit Syndrome _ 8bit Horror - COPYRIGHT FREE MUSIC (128 kbps).mp3-93bcb175b5a3aa34548f3aa5a8647cce.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

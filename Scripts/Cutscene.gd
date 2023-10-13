@@ -9,8 +9,8 @@ var die = false
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	$AnimationPlayer.play(Global.current_scene)
-	$DialogBox.setTextAndIcon(Global.cutsceneFirstText, Global.cutsceneFirstIcon)
+	reset()
+	$AudioStreamPlayer.play()
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):
 #	pass
@@ -30,10 +30,21 @@ func _on_DialogBox_next():
 		$DialogBox.visible = false
 		var scene = load("res://Scenes/Items.tscn")
 		var itemsSelectorScene = scene.instance()
+		itemsSelectorScene.name = "Items"
 		add_child(itemsSelectorScene)
+		get_node("Items").connect("itemSelected", self, "itemSelected")
 	elif die:
 		$AnimationPlayer.play("GameOverDrogadicto")
 		Global.dieAssaulted()
 	else:
 		$DialogBox.setTextAndIcon("¡Ah no tenés nada! ¡Entonces me llevo tu vida!", Global.miniDrogadicto)
 		die = true
+
+func itemSelected():
+	remove_child(get_node("Items"))
+	reset()
+
+func reset():
+	$DialogBox.visible = true
+	$AnimationPlayer.play(Global.current_scene)
+	$DialogBox.setTextAndIcon(Global.cutsceneFirstText, Global.cutsceneFirstIcon)

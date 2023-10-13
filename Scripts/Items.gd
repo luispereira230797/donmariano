@@ -8,6 +8,7 @@ var selected = ""
 # Declare member variables here. Examples:
 # var a = 2
 # var b = "text"
+signal itemSelected()
 
 
 # Called when the node enters the scene tree for the first time.
@@ -65,4 +66,4 @@ func _on_AcceptButton_pressed():
 	Global.select(selected)
 	Global.cutsceneFirstText = "¡Eso me sirve! ¡Nos vemos mañana Don!"
 	Global.cutsceneFirstIcon = Global.miniDrogadicto
-	Global.callCinematic()
+	emit_signal("itemSelected")
