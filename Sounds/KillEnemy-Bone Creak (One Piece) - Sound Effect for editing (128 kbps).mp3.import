@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/KillEnemy-Bone Creak (One Piece) - Sound Effect for editing (128 kbps).mp3-dc33ba18308a0778ffc5a22125112edf.mp3str"
+
+[deps]
+
+source_file="res://Sounds/KillEnemy-Bone Creak (One Piece) - Sound Effect for editing (128 kbps).mp3"
+dest_files=[ "res://.import/KillEnemy-Bone Creak (One Piece) - Sound Effect for editing (128 kbps).mp3-dc33ba18308a0778ffc5a22125112edf.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

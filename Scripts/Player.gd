@@ -1,11 +1,11 @@
 extends KinematicBody2D
 
-const moveSpeed = 5
-const maxSpeed = 300
+const moveSpeed = 10
+const maxSpeed = 330
 
-const jumpHeight = -450
+const jumpHeight = -500
 const up = Vector2(0, -1)
-const gravity = 20
+const gravity = 30
 onready var sprite = $Sprite
 var timeInAir = 0
 var movingRight = false
@@ -73,9 +73,9 @@ func _physics_process(delta):
 	# If not in floor and is falling, check de jump correction
 	if !is_on_floor() && motion.y < 0:
 		if $RayCast2DLeft.is_colliding() && !$RayCast2DRight.is_colliding():
-			motion.x = 120
+			motion.x = 200
 		elif !$RayCast2DLeft.is_colliding() && $RayCast2DRight.is_colliding():
-			motion.x = -120
+			motion.x = -200
 	motion = move_and_slide(motion, up)
 
 func _loseLife(name):

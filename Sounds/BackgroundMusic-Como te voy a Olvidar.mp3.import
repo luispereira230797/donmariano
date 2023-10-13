@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/BackgroundMusic-Como te voy a Olvidar.mp3-aea7f3929ccf0ec4614a26893f637d06.mp3str"
+
+[deps]
+
+source_file="res://Sounds/BackgroundMusic-Como te voy a Olvidar.mp3"
+dest_files=[ "res://.import/BackgroundMusic-Como te voy a Olvidar.mp3-aea7f3929ccf0ec4614a26893f637d06.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0
