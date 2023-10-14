@@ -577,6 +577,7 @@ points = PoolVector2Array( 496, 272, 0, 272, 0, 16, 496, 16 )
 extents = Vector2( 27.5242, 436.456 )
 
 [node name="TestLevel" type="Node2D"]
+position = Vector2( 1, -1 )
 script = ExtResource( 7 )
 
 [node name="Enemy" parent="." instance=ExtResource( 3 )]
@@ -627,26 +628,26 @@ position = Vector2( 9893, 682 )
 position = Vector2( 13149, -61 )
 
 [node name="Enemy16" parent="." instance=ExtResource( 3 )]
-position = Vector2( 13526, -231 )
+position = Vector2( 13485, -239 )
 type = 2
 
 [node name="Enemy17" parent="." instance=ExtResource( 3 )]
-position = Vector2( 13997, -238 )
+position = Vector2( 14048, -240 )
 type = 2
 
 [node name="Enemy18" parent="." instance=ExtResource( 3 )]
 position = Vector2( 14389, -115 )
 
 [node name="Enemy19" parent="." instance=ExtResource( 3 )]
-position = Vector2( 14886, -487 )
+position = Vector2( 14874, -417 )
 type = 2
 
 [node name="Enemy20" parent="." instance=ExtResource( 3 )]
-position = Vector2( 14607, -307 )
+position = Vector2( 14587, -259 )
 type = 2
 
 [node name="Enemy21" parent="." instance=ExtResource( 3 )]
-position = Vector2( 15376, -481 )
+position = Vector2( 15395, -417 )
 type = 2
 
 [node name="DeathByFall" parent="." instance=ExtResource( 13 )]
@@ -670,7 +671,7 @@ tile_data = PoolIntArray( -1506542, 4, 0, -1506400, 4, 0, -1375328, 2, 0, -13753
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="Player" parent="." instance=ExtResource( 1 )]
-position = Vector2( -670, 459 )
+position = Vector2( 13141, -547 )
 
 [node name="ParallaxBackground4" type="ParallaxBackground" parent="."]
 layer = -98
