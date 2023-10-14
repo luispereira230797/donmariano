@@ -7,7 +7,7 @@ const MUSIC_ROSE_GARDEN = "res://Sounds/EndingMusics/RoseGarden.mp3"
 const MUSIC_NO_DESTINATION = "res://Sounds/EndingMusics/NoDestination.mp3"
 const MUSIC_A_LOST_SOUL = "res://Sounds/EndingMusics/ALostSoul.mp3"
 
-var items = []
+var items = ["cash", "ring", "phone"]
 var current_scene = "KilledByDrogadicto"
 var previous_scene = null
 var text = ""
