@@ -5,11 +5,17 @@ extends Node2D
 # var a = 2
 # var b = "text"
 
-
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	if Global.lastCheckPoint:
+		print('checkpoint')
+		$Player/Camera2D.smoothing_enabled = false
 		$Player.position = Global.lastCheckPoint
+		var timer = Timer.new()
+		timer.wait_time = 0.5
+		timer.connect("timeout", self, "enableSmoothCamera")
+		add_child(timer)
+		timer.start()
 	else:
 		Global.lastCheckPoint = $Player.position
 	$AudioStreamPlayer.play()
@@ -39,3 +45,6 @@ func _on_DeathByFall3_dieByFall():
 
 func _on_DeathByFall4_dieByFall():
 	$AudioStreamPlayer.stop()
+
+func enableSmoothCamera():
+	$Player/Camera2D.smoothing_enabled = true
