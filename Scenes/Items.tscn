@@ -110,8 +110,12 @@ tracks/3/keys = {
 
 [sub_resource type="StyleBoxEmpty" id=3]
 
-[node name="CanvasLayer" type="CanvasLayer"]
+[node name="ItemsCanvasLayer" type="CanvasLayer"]
 script = ExtResource( 6 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+anims/BackgroundAnimation = SubResource( 1 )
+anims/RESET = SubResource( 2 )
 
 [node name="Sprite" type="Sprite" parent="."]
 position = Vector2( 661, 113 )
@@ -149,10 +153,6 @@ mouse_filter = 2
 mouse_filter = 2
 custom_constants/separation = 10
 alignment = 1
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-anims/BackgroundAnimation = SubResource( 1 )
-anims/RESET = SubResource( 2 )
 
 [node name="AcceptButton" type="Button" parent="."]
 margin_left = 570.0

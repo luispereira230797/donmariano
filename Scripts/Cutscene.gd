@@ -11,6 +11,7 @@ var die = false
 func _ready():
 	reset()
 	$AudioStreamPlayer.play()
+	$Items.visible = false
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):
 #	pass
@@ -28,11 +29,8 @@ func _on_DialogBox_next():
 		Global.back()
 	elif Global.items.size() > 0:
 		$DialogBox.visible = false
-		var scene = load("res://Scenes/Items.tscn")
-		var itemsSelectorScene = scene.instance()
-		itemsSelectorScene.name = "Items"
-		add_child(itemsSelectorScene)
-		get_node("Items").connect("itemSelected", self, "itemSelected")
+		$Items.visible = true
+		$Items.playIntro()
 	elif die:
 		$AnimationPlayer.play("GameOverDrogadicto")
 		Global.dieAssaulted()
@@ -41,10 +39,14 @@ func _on_DialogBox_next():
 		die = true
 
 func itemSelected():
-	remove_child(get_node("Items"))
 	reset()
 
 func reset():
 	$DialogBox.visible = true
 	$AnimationPlayer.play(Global.current_scene)
 	$DialogBox.setTextAndIcon(Global.cutsceneFirstText, Global.cutsceneFirstIcon)
+
+
+func _on_ItemsCanvasLayer_itemSelected():
+	$Items.visible = false
+	reset()

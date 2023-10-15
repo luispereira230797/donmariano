@@ -8,9 +8,7 @@
 [ext_resource path="res://Scenes/Dialog.tscn" type="PackedScene" id=6]
 [ext_resource path="res://assets/sprites/enemycinematica2.png" type="Texture" id=7]
 [ext_resource path="res://Sounds/BackgroundAsalto-8bit Syndrome _ 8bit Horror - COPYRIGHT FREE MUSIC (128 kbps).mp3" type="AudioStream" id=8]
-
-[sub_resource type="Animation" id=3]
-resource_name = "GameOverDrogadicto"
+[ext_resource path="res://Scenes/Items.tscn" type="PackedScene" id=9]
 
 [sub_resource type="Animation" id=4]
 resource_name = "ItemSelected"
@@ -91,19 +89,19 @@ tracks/5/keys = {
 resource_name = "KilledByDrogadicto"
 length = 2.0
 tracks/0/type = "value"
-tracks/0/path = NodePath("../CharacterSudor:position")
+tracks/0/path = NodePath("Enemy:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0, 0.5, 1, 2 ),
-"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
 "update": 0,
-"values": [ Vector2( 316, 345 ), Vector2( 715, 421 ), Vector2( 728, 412 ), Vector2( 730, 497 ) ]
+"values": [ Vector2( 698, 1017 ), Vector2( 682, 401 ) ]
 }
 tracks/1/type = "value"
-tracks/1/path = NodePath("../CharacterSudor:rotation_degrees")
+tracks/1/path = NodePath("Enemy:rotation_degrees")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/imported = false
@@ -112,22 +110,22 @@ tracks/1/keys = {
 "times": PoolRealArray( 0, 0.5, 0.7, 1 ),
 "transitions": PoolRealArray( 1, 1, 1, 1 ),
 "update": 0,
-"values": [ 0.0, 5.09221, 6.86774, 1.3107 ]
+"values": [ -3.27659, -3.27659, 3.5, 0.0 ]
 }
 tracks/2/type = "value"
-tracks/2/path = NodePath("Enemy:position")
+tracks/2/path = NodePath("Character:position")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/imported = false
 tracks/2/enabled = true
 tracks/2/keys = {
-"times": PoolRealArray( 0, 0.5 ),
-"transitions": PoolRealArray( 1, 1 ),
+"times": PoolRealArray( 0, 0.5, 0.7, 1 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
 "update": 0,
-"values": [ Vector2( 698, 1017 ), Vector2( 682, 401 ) ]
+"values": [ Vector2( 224, 379 ), Vector2( 633, 428 ), Vector2( 633, 428 ), Vector2( 649, 399 ) ]
 }
 tracks/3/type = "value"
-tracks/3/path = NodePath("Enemy:rotation_degrees")
+tracks/3/path = NodePath("Character:rotation_degrees")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/imported = false
@@ -136,22 +134,22 @@ tracks/3/keys = {
 "times": PoolRealArray( 0, 0.5, 0.7, 1 ),
 "transitions": PoolRealArray( 1, 1, 1, 1 ),
 "update": 0,
-"values": [ -3.27659, -3.27659, 3.5, 0.0 ]
+"values": [ 6.31731, 6.31731, 7.7, 0.5 ]
 }
 tracks/4/type = "value"
-tracks/4/path = NodePath("Character:position")
+tracks/4/path = NodePath("CharacterSudor:position")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/imported = false
 tracks/4/enabled = true
 tracks/4/keys = {
-"times": PoolRealArray( 0, 0.5, 0.7, 1 ),
+"times": PoolRealArray( 0, 0.5, 1, 2 ),
 "transitions": PoolRealArray( 1, 1, 1, 1 ),
 "update": 0,
-"values": [ Vector2( 224, 379 ), Vector2( 633, 428 ), Vector2( 633, 428 ), Vector2( 649, 399 ) ]
+"values": [ Vector2( 316, 345 ), Vector2( 715, 421 ), Vector2( 728, 412 ), Vector2( 730, 497 ) ]
 }
 tracks/5/type = "value"
-tracks/5/path = NodePath("Character:rotation_degrees")
+tracks/5/path = NodePath("CharacterSudor:rotation_degrees")
 tracks/5/interp = 1
 tracks/5/loop_wrap = true
 tracks/5/imported = false
@@ -160,31 +158,130 @@ tracks/5/keys = {
 "times": PoolRealArray( 0, 0.5, 0.7, 1 ),
 "transitions": PoolRealArray( 1, 1, 1, 1 ),
 "update": 0,
-"values": [ 6.31731, 6.31731, 7.7, 0.5 ]
+"values": [ 0.0, 5.1, 6.9, 1.3 ]
 }
 tracks/6/type = "value"
-tracks/6/path = NodePath("CharacterSudor:position")
+tracks/6/path = NodePath("Enemy2:visible")
 tracks/6/interp = 1
 tracks/6/loop_wrap = true
 tracks/6/imported = false
 tracks/6/enabled = true
 tracks/6/keys = {
-"times": PoolRealArray( 0, 0.5, 1, 2 ),
-"transitions": PoolRealArray( 1, 1, 1, 1 ),
-"update": 0,
-"values": [ Vector2( 316, 345 ), Vector2( 715, 421 ), Vector2( 728, 412 ), Vector2( 730, 497 ) ]
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
 }
 tracks/7/type = "value"
-tracks/7/path = NodePath("CharacterSudor:rotation_degrees")
+tracks/7/path = NodePath("Enemy:visible")
 tracks/7/interp = 1
 tracks/7/loop_wrap = true
 tracks/7/imported = false
 tracks/7/enabled = true
 tracks/7/keys = {
-"times": PoolRealArray( 0, 0.5, 0.7, 1 ),
-"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+
+[sub_resource type="Animation" id=2]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("Background:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
 "update": 0,
-"values": [ 0.0, 5.1, 6.9, 1.3 ]
+"values": [ Vector2( 649, 360 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Enemy:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 698, 1017 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Enemy:rotation_degrees")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ -3.27659 ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Character:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 224, 379 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("Character:rotation_degrees")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 6.31731 ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("CharacterSudor:position")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 316, 345 ) ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("CharacterSudor:rotation_degrees")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 0.0 ]
+}
+tracks/7/type = "value"
+tracks/7/path = NodePath("Enemy:visible")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ false ]
 }
 tracks/8/type = "value"
 tracks/8/path = NodePath("Enemy2:visible")
@@ -195,235 +292,28 @@ tracks/8/enabled = true
 tracks/8/keys = {
 "times": PoolRealArray( 0 ),
 "transitions": PoolRealArray( 1 ),
-"update": 1,
+"update": 0,
 "values": [ false ]
 }
 tracks/9/type = "value"
-tracks/9/path = NodePath("Enemy:visible")
+tracks/9/path = NodePath("Enemy2:position")
 tracks/9/interp = 1
 tracks/9/loop_wrap = true
 tracks/9/imported = false
 tracks/9/enabled = true
 tracks/9/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 1,
-"values": [ true ]
-}
-
-[sub_resource type="Animation" id=2]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/path = NodePath("../Background:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 0,
-"values": [ 0 ]
-}
-tracks/1/type = "value"
-tracks/1/path = NodePath("../Enemy:position")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 0,
-"values": [ Vector2( 682, 366 ) ]
-}
-tracks/2/type = "value"
-tracks/2/path = NodePath("../Enemy:rotation_degrees")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 0,
-"values": [ 2.09837 ]
-}
-tracks/3/type = "value"
-tracks/3/path = NodePath("../Character:rotation_degrees")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 0,
-"values": [ 6.31731 ]
-}
-tracks/4/type = "value"
-tracks/4/path = NodePath("../Character:position")
-tracks/4/interp = 1
-tracks/4/loop_wrap = true
-tracks/4/imported = false
-tracks/4/enabled = true
-tracks/4/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 0,
-"values": [ Vector2( 224, 379 ) ]
-}
-tracks/5/type = "value"
-tracks/5/path = NodePath("../CharacterSudor:position")
-tracks/5/interp = 1
-tracks/5/loop_wrap = true
-tracks/5/imported = false
-tracks/5/enabled = true
-tracks/5/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 0,
-"values": [ Vector2( 316, 345 ) ]
-}
-tracks/6/type = "value"
-tracks/6/path = NodePath("../CharacterSudor:rotation_degrees")
-tracks/6/interp = 1
-tracks/6/loop_wrap = true
-tracks/6/imported = false
-tracks/6/enabled = true
-tracks/6/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 0,
-"values": [ 0.0 ]
-}
-tracks/7/type = "value"
-tracks/7/path = NodePath("Background:position")
-tracks/7/interp = 1
-tracks/7/loop_wrap = true
-tracks/7/imported = false
-tracks/7/enabled = true
-tracks/7/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 0,
-"values": [ Vector2( 649, 360 ) ]
-}
-tracks/8/type = "value"
-tracks/8/path = NodePath("Enemy:position")
-tracks/8/interp = 1
-tracks/8/loop_wrap = true
-tracks/8/imported = false
-tracks/8/enabled = true
-tracks/8/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 0,
-"values": [ Vector2( 698, 1017 ) ]
-}
-tracks/9/type = "value"
-tracks/9/path = NodePath("Enemy:rotation_degrees")
-tracks/9/interp = 1
-tracks/9/loop_wrap = true
-tracks/9/imported = false
-tracks/9/enabled = true
-tracks/9/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 0,
-"values": [ -3.27659 ]
-}
-tracks/10/type = "value"
-tracks/10/path = NodePath("Character:position")
-tracks/10/interp = 1
-tracks/10/loop_wrap = true
-tracks/10/imported = false
-tracks/10/enabled = true
-tracks/10/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 0,
-"values": [ Vector2( 224, 379 ) ]
-}
-tracks/11/type = "value"
-tracks/11/path = NodePath("Character:rotation_degrees")
-tracks/11/interp = 1
-tracks/11/loop_wrap = true
-tracks/11/imported = false
-tracks/11/enabled = true
-tracks/11/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 0,
-"values": [ 6.31731 ]
-}
-tracks/12/type = "value"
-tracks/12/path = NodePath("CharacterSudor:position")
-tracks/12/interp = 1
-tracks/12/loop_wrap = true
-tracks/12/imported = false
-tracks/12/enabled = true
-tracks/12/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 0,
-"values": [ Vector2( 316, 345 ) ]
-}
-tracks/13/type = "value"
-tracks/13/path = NodePath("CharacterSudor:rotation_degrees")
-tracks/13/interp = 1
-tracks/13/loop_wrap = true
-tracks/13/imported = false
-tracks/13/enabled = true
-tracks/13/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 0,
-"values": [ 0.0 ]
-}
-tracks/14/type = "value"
-tracks/14/path = NodePath("Enemy:visible")
-tracks/14/interp = 1
-tracks/14/loop_wrap = true
-tracks/14/imported = false
-tracks/14/enabled = true
-tracks/14/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 0,
-"values": [ false ]
-}
-tracks/15/type = "value"
-tracks/15/path = NodePath("Enemy2:visible")
-tracks/15/interp = 1
-tracks/15/loop_wrap = true
-tracks/15/imported = false
-tracks/15/enabled = true
-tracks/15/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 0,
-"values": [ false ]
-}
-tracks/16/type = "value"
-tracks/16/path = NodePath("Enemy2:position")
-tracks/16/interp = 1
-tracks/16/loop_wrap = true
-tracks/16/imported = false
-tracks/16/enabled = true
-tracks/16/keys = {
 "times": PoolRealArray( 0 ),
 "transitions": PoolRealArray( 1 ),
 "update": 0,
 "values": [ Vector2( 604, 354 ) ]
 }
-tracks/17/type = "value"
-tracks/17/path = NodePath("Enemy2:rotation_degrees")
-tracks/17/interp = 1
-tracks/17/loop_wrap = true
-tracks/17/imported = false
-tracks/17/enabled = true
-tracks/17/keys = {
+tracks/10/type = "value"
+tracks/10/path = NodePath("Enemy2:rotation_degrees")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/keys = {
 "times": PoolRealArray( 0 ),
 "transitions": PoolRealArray( 1 ),
 "update": 0,
@@ -434,7 +324,6 @@ tracks/17/keys = {
 script = ExtResource( 2 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-anims/GameOverDrogadicto = SubResource( 3 )
 anims/ItemSelected = SubResource( 4 )
 anims/KilledByDrogadicto = SubResource( 1 )
 anims/RESET = SubResource( 2 )
@@ -468,6 +357,8 @@ position = Vector2( 316, 345 )
 scale = Vector2( 0.841667, 0.841667 )
 texture = ExtResource( 5 )
 
+[node name="Items" parent="." instance=ExtResource( 9 )]
+
 [node name="DialogBox" parent="." instance=ExtResource( 6 )]
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
@@ -475,4 +366,5 @@ stream = ExtResource( 8 )
 volume_db = -10.0
 
 [connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_AnimationPlayer_animation_finished"]
+[connection signal="itemSelected" from="Items" to="." method="_on_ItemsCanvasLayer_itemSelected"]
 [connection signal="next" from="DialogBox" to="." method="_on_DialogBox_next"]

@@ -14,7 +14,7 @@ signal itemSelected()
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	$ScrollContainer.visible = false
-	$AnimationPlayer.play("BackgroundAnimation")
+	#$AnimationPlayer.play("BackgroundAnimation")
 	$AcceptButton.visible = false
 	var buttons = []
 	for item in Global.items:
@@ -67,3 +67,5 @@ func _on_AcceptButton_pressed():
 	Global.cutsceneFirstText = "¡Eso me sirve! ¡Nos vemos mañana Don!"
 	Global.cutsceneFirstIcon = Global.miniDrogadicto
 	emit_signal("itemSelected")
+func playIntro():
+	$AnimationPlayer.play("BackgroundAnimation")
