@@ -1,6 +1,6 @@
 extends KinematicBody2D
 
-const moveSpeed = 10
+const moveSpeed = 30
 const maxSpeed = 330
 
 const jumpHeight = -500
@@ -55,7 +55,7 @@ func _physics_process(delta):
 		$AnimationPlayer.play("Idle")
 		friction = true
 	# If is pressing jump button and is in the limit of time, jump
-	if Input.is_action_pressed("ui_up"):
+	if Input.is_action_pressed("ui_accept"):
 		# Play jump sound
 		if !jumping:
 			$JumpSoundPlayer.play()
