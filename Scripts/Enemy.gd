@@ -21,7 +21,7 @@ func _process(delta):
 func move_character():
 	var auxSpeed = speed
 	if type == 2:
-		auxSpeed = auxSpeed*4
+		auxSpeed = auxSpeed*5
 	velocity.y += gravity
 	$AnimationPlayer.play("Walk")
 	if move:
