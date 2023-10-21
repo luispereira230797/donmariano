@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/BackgroundIntro-CumbiaBronco.mp3-ff45bc3307c32e30b5448c31252bcb0f.mp3str"
+
+[deps]
+
+source_file="res://Sounds/BackgroundIntro-CumbiaBronco.mp3"
+dest_files=[ "res://.import/BackgroundIntro-CumbiaBronco.mp3-ff45bc3307c32e30b5448c31252bcb0f.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

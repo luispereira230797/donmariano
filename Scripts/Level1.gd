@@ -7,6 +7,8 @@ var timer = Timer.new()
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	$AnimationPlayer.play("Intro")
+	$Player/Camera2D.process_mode = Camera2D.CAMERA2D_PROCESS_IDLE
 	if Global.lastPosition:
 		$Player/Camera2D.smoothing_enabled = false
 		get_node(Global.lastEnemy).remove(self)
@@ -50,3 +52,9 @@ func _on_DeathByFall4_dieByFall():
 func enableSmoothCamera():
 	$Player/Camera2D.smoothing_enabled = true
 	timer.stop()
+
+
+func _on_AnimationPlayer_animation_finished(anim_name):
+	if anim_name == "Intro":
+		$Player/Camera2D.process_mode = Camera2D.CAMERA2D_PROCESS_PHYSICS
+		$Player.isLocked = false

@@ -22,7 +22,62 @@ var gameOverFinalColor = "ff0000"
 var gameOverMusic = MUSIC_ROSE_GARDEN
 var cutsceneFirstText = ""
 var cutsceneFirstIcon = ""
+var introMusicTime = 0
 
+const intro1Dialog = [
+	{
+		"text": "Z...Z...Z...",
+		"character": "ExpSleepingMouth,ExpSleeping",
+		"talker": miniDonMario
+	},
+	{
+		"text": "...",
+		"character": "ExpWakeUp",
+		"talker": miniDonMario
+	},
+	{
+		"text": "Me quedé dormido después del almuerzo...",
+		"character": "ExpWakeUp",
+		"talker": miniDonMario
+	},
+	{
+		"text": "¿Hasta que hora me quedé dormido?",
+		"character": "ExpWakeUp",
+		"talker": miniDonMario
+	},
+]
+const intro2Dialog = [
+	{
+		"text": "Bueno, es hora de salir.",
+		"character": "ExpSee",
+		"talker": miniDonMario
+	},
+	{
+		"text": "Mañana sigo con las obras, ahora tengo que volver a casa.",
+		"character": "ExpSee",
+		"talker": miniDonMario
+	},
+	{
+		"text": "Ojalá no me roben el celular...",
+		"character": "ExpSuspicious",
+		"talker": miniDonMario
+	},
+	{
+		"text": "Ni el anillo de bodas...",
+		"character": "ExpSuspicious",
+		"talker": miniDonMario
+	},
+	{
+		"text": "Ni el dinero para la hipoteca que cobré hoy...",
+		"character": "ExpSuspicious",
+		"talker": miniDonMario
+	},
+	{
+		"text": "O mi esposa se enfurecerá.",
+		"character": "ExpSee",
+		"talker": miniDonMario
+	},
+]
 const finalDialog = [
 	{
 		"text": "Hola mi amor, ya llegué.",

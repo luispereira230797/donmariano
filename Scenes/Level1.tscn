@@ -1,4 +1,4 @@
-[gd_scene load_steps=39 format=2]
+[gd_scene load_steps=41 format=2]
 
 [ext_resource path="res://Scenes/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://assets/tilesets/level1tileset.png" type="Texture" id=2]
@@ -599,6 +599,36 @@ points = PoolVector2Array( 496, 272, 0, 272, 0, 16, 496, 16 )
 [sub_resource type="RectangleShape2D" id=15]
 extents = Vector2( 27.5242, 436.456 )
 
+[sub_resource type="Animation" id=26]
+resource_name = "Intro"
+tracks/0/type = "value"
+tracks/0/path = NodePath("Player:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( -954.2, 465 ), Vector2( -767.2, 463 ) ]
+}
+
+[sub_resource type="Animation" id=27]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("Player:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( -945, 456 ) ]
+}
+
 [node name="TestLevel" type="Node2D"]
 position = Vector2( 1, -1 )
 script = ExtResource( 7 )
@@ -681,6 +711,10 @@ position = Vector2( 15395, -417 )
 type = 2
 nearbyEnemies = [ "Enemy19" ]
 
+[node name="Enemy" parent="Enemy21" instance=ExtResource( 3 )]
+position = Vector2( -3400, 546 )
+type = 2
+
 [node name="DeathByFall" parent="." instance=ExtResource( 13 )]
 position = Vector2( 2792, 1068 )
 
@@ -701,7 +735,9 @@ tile_data = PoolIntArray( -1506542, 4, 0, -1506400, 4, 0, -1375328, 2, 0, -13753
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="Player" parent="." instance=ExtResource( 1 )]
-position = Vector2( -837, 464 )
+position = Vector2( -945, 456 )
+isLocked = true
+animation = "Walk"
 
 [node name="ParallaxBackground4" type="ParallaxBackground" parent="."]
 layer = -98
@@ -762,18 +798,23 @@ position = Vector2( 663.764, 371.242 )
 scale = Vector2( 0.716218, 0.716218 )
 texture = ExtResource( 6 )
 
-[node name="Sprite" type="Sprite" parent="."]
-position = Vector2( -1219, 115 )
-scale = Vector2( 0.762963, 0.762963 )
+[node name="Building0" type="Sprite" parent="."]
+position = Vector2( -1249, -644 )
+scale = Vector2( 0.855, 0.855 )
 texture = ExtResource( 4 )
 
-[node name="StaticBody2D" type="StaticBody2D" parent="Sprite"]
+[node name="Building1" type="Sprite" parent="."]
+position = Vector2( -1240, 65.5 )
+scale = Vector2( 0.85463, 0.85463 )
+texture = ExtResource( 4 )
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite/StaticBody2D"]
+[node name="StaticBody2D" type="StaticBody2D" parent="Building1"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Building1/StaticBody2D"]
 position = Vector2( 389.272, 427.282 )
 shape = SubResource( 15 )
 
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="Sprite/StaticBody2D"]
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Building1/StaticBody2D"]
 position = Vector2( 389.272, -18.3495 )
 shape = SubResource( 15 )
 
@@ -804,8 +845,13 @@ position = Vector2( 11736, 319 )
 stream = ExtResource( 5 )
 volume_db = -8.0
 
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+anims/Intro = SubResource( 26 )
+anims/RESET = SubResource( 27 )
+
 [connection signal="dieByFall" from="DeathByFall" to="." method="_on_DeathByFall_dieByFall"]
 [connection signal="body_entered" from="Area2D" to="." method="_on_Area2D_body_entered"]
 [connection signal="dieByFall" from="DeathByFall2" to="." method="_on_DeathByFall2_dieByFall"]
 [connection signal="dieByFall" from="DeathByFall3" to="." method="_on_DeathByFall3_dieByFall"]
 [connection signal="dieByFall" from="DeathByFall4" to="." method="_on_DeathByFall4_dieByFall"]
+[connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_AnimationPlayer_animation_finished"]
