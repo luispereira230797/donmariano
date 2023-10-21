@@ -581,6 +581,7 @@ script = ExtResource( 7 )
 
 [node name="Enemy" parent="." instance=ExtResource( 3 )]
 position = Vector2( 5269, 686 )
+nearbyEnemies = [ "Enemy5" ]
 
 [node name="Enemy3" parent="." instance=ExtResource( 3 )]
 position = Vector2( 8095, 1073 )

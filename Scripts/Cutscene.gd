@@ -35,7 +35,7 @@ func _on_DialogBox_next():
 		$AnimationPlayer.play("GameOverDrogadicto")
 		Global.dieAssaulted()
 	else:
-		$DialogBox.setTextAndIcon("¡Ah no tenés nada! ¡Entonces me llevo tu vida!", Global.miniDrogadicto)
+		$DialogBox.setTextAndIcon("¡Ah no tienes nada! ¡Entonces me llevo tu vida!", Global.miniDrogadicto)
 		die = true
 
 func itemSelected():
