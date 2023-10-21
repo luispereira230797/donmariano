@@ -1,4 +1,4 @@
-[gd_scene load_steps=39 format=2]
+[gd_scene load_steps=38 format=2]
 
 [ext_resource path="res://Scenes/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://assets/tilesets/level1tileset.png" type="Texture" id=2]
@@ -11,7 +11,6 @@
 [ext_resource path="res://assets/sprites/backgroundground1.png" type="Texture" id=9]
 [ext_resource path="res://assets/sprites/backgroundground2.png" type="Texture" id=10]
 [ext_resource path="res://assets/sprites/backgroundbottom.png" type="Texture" id=11]
-[ext_resource path="res://Scenes/CheckPoint.tscn" type="PackedScene" id=12]
 [ext_resource path="res://Scenes/DeathByFall.tscn" type="PackedScene" id=13]
 [ext_resource path="res://assets/sprites/house.png" type="Texture" id=14]
 
@@ -607,9 +606,11 @@ type = 2
 
 [node name="Enemy9" parent="." instance=ExtResource( 3 )]
 position = Vector2( 8913, 860 )
+nearbyEnemies = [ "Enemy10" ]
 
 [node name="Enemy10" parent="." instance=ExtResource( 3 )]
 position = Vector2( 9396, 865 )
+nearbyEnemies = [ "Enemy9" ]
 
 [node name="Enemy11" parent="." instance=ExtResource( 3 )]
 position = Vector2( 10605, 559 )
@@ -630,10 +631,12 @@ position = Vector2( 13149, -61 )
 [node name="Enemy16" parent="." instance=ExtResource( 3 )]
 position = Vector2( 13485, -239 )
 type = 2
+nearbyEnemies = [ "Enemy17" ]
 
 [node name="Enemy17" parent="." instance=ExtResource( 3 )]
 position = Vector2( 14048, -240 )
 type = 2
+nearbyEnemies = [ "Enemy16" ]
 
 [node name="Enemy18" parent="." instance=ExtResource( 3 )]
 position = Vector2( 14389, -115 )
@@ -641,6 +644,7 @@ position = Vector2( 14389, -115 )
 [node name="Enemy19" parent="." instance=ExtResource( 3 )]
 position = Vector2( 14874, -417 )
 type = 2
+nearbyEnemies = [ "Enemy21" ]
 
 [node name="Enemy20" parent="." instance=ExtResource( 3 )]
 position = Vector2( 14587, -259 )
@@ -649,6 +653,7 @@ type = 2
 [node name="Enemy21" parent="." instance=ExtResource( 3 )]
 position = Vector2( 15395, -417 )
 type = 2
+nearbyEnemies = [ "Enemy19" ]
 
 [node name="DeathByFall" parent="." instance=ExtResource( 13 )]
 position = Vector2( 2792, 1068 )
@@ -671,7 +676,7 @@ tile_data = PoolIntArray( -1506542, 4, 0, -1506400, 4, 0, -1375328, 2, 0, -13753
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="Player" parent="." instance=ExtResource( 1 )]
-position = Vector2( -705, 460 )
+position = Vector2( -832, 462 )
 
 [node name="ParallaxBackground4" type="ParallaxBackground" parent="."]
 layer = -98
@@ -760,15 +765,6 @@ scale = Vector2( 0.762963, 0.762963 )
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 position = Vector2( 95.6797, 100.922 )
 shape = SubResource( 15 )
-
-[node name="CheckPoint1" parent="." instance=ExtResource( 12 )]
-position = Vector2( 3162, 864 )
-
-[node name="CheckPoint2" parent="." instance=ExtResource( 12 )]
-position = Vector2( 7665, 1246 )
-
-[node name="CheckPoint3" parent="." instance=ExtResource( 12 )]
-position = Vector2( 12007, 160 )
 
 [node name="DeathByFall2" parent="." instance=ExtResource( 13 )]
 position = Vector2( 7381, 1416 )

@@ -1,5 +1,5 @@
 extends Node2D
-
+var timer = Timer.new()
 
 # Declare member variables here. Examples:
 # var a = 2
@@ -7,17 +7,18 @@ extends Node2D
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	if Global.lastCheckPoint:
-		print('checkpoint')
+	if Global.lastPosition:
 		$Player/Camera2D.smoothing_enabled = false
-		$Player.position = Global.lastCheckPoint
-		var timer = Timer.new()
+		get_node(Global.lastEnemy).remove(self)
+		$Player.position = Global.lastPosition
+		# Smooth camera
+		timer = Timer.new()
 		timer.wait_time = 0.5
 		timer.connect("timeout", self, "enableSmoothCamera")
 		add_child(timer)
 		timer.start()
 	else:
-		Global.lastCheckPoint = $Player.position
+		Global.lastPosition = $Player.position
 	$AudioStreamPlayer.play()
 
 
@@ -48,3 +49,4 @@ func _on_DeathByFall4_dieByFall():
 
 func enableSmoothCamera():
 	$Player/Camera2D.smoothing_enabled = true
+	timer.stop()

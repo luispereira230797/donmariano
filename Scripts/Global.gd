@@ -13,6 +13,8 @@ var previous_scene = null
 var text = ""
 var itemSelected = false
 var lastCheckPoint = null
+var lastEnemy = null
+var lastPosition = null
 var gameOverFinalText = ""
 var gameOverMessage = ""
 var gameOverText = ""
@@ -540,6 +542,8 @@ func reset():
 	text = ""
 	itemSelected = false
 	lastCheckPoint = null
+	lastPosition = null
+	lastEnemy = null
 	gameOverFinalText = ""
 	gameOverMessage = ""
 	gameOverText = ""

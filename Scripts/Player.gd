@@ -78,9 +78,11 @@ func _physics_process(delta):
 			motion.x = -200
 	motion = move_and_slide(motion, up)
 
-func _loseLife(name):
+func _loseLife(enemyName, position):
 	Global.cutsceneFirstText = "¡Esto es un asalto Don! ¡Arriba las manos y dame lo que tengas carajo!"
 	Global.cutsceneFirstIcon = Global.miniDrogadicto
+	Global.lastPosition = position
+	Global.lastEnemy = enemyName
 	Global.die()
 	# get_tree().reload_current_scene()
 
@@ -101,3 +103,6 @@ func followCamera():
 func _on_JumpSoundArea2D_body_entered(body):
 	if body.get_name() != "Player":
 		jumping = false
+
+func getNearbyEnemies():
+	return $EnemiesDetector.get_overlapping_bodies()

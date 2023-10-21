@@ -60,6 +60,7 @@ extents = Vector2( 24, 63.5 )
 extents = Vector2( 23.5, 8.75 )
 
 [node name="Enemy" type="KinematicBody2D"]
+collision_layer = 33
 script = ExtResource( 2 )
 
 [node name="Container" type="Node2D" parent="."]
