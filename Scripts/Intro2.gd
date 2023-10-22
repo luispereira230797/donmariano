@@ -6,7 +6,7 @@ extends Node2D
 # var b = "text"
 
 
-var dialog = Global.intro2Dialog
+var dialog = Global.intro2Dialog.duplicate()
 var pos = 0
 
 # Called when the node enters the scene tree for the first time.
