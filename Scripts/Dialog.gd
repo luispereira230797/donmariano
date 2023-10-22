@@ -1,6 +1,6 @@
 extends CanvasLayer
 signal next()
-
+var isLocked = true
 # Declare member variables here. Examples:
 # var a = 2
 # var b = "text"
@@ -14,10 +14,14 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):
 #	pass
-
+func _input(event):
+	if event is InputEventKey:
+		if event.pressed && event.is_action("ui_accept") && !isLocked:
+			emit_signal('next')
 
 func _on_AnimationPlayer_animation_finished(anim_name):
 	if anim_name == "Intro":
+		isLocked = false
 		setTextAndIcon(Global.text, "")
 
 func _on_ContinueButton_pressed():
