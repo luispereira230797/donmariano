@@ -1,16 +1,15 @@
 extends CanvasLayer
 signal next()
 signal finishIntro()
-var isLocked = true
+export var isLocked = false
 # Declare member variables here. Examples:
 # var a = 2
 # var b = "text"
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	$AnimationPlayer.play("Intro")
-	$ContinueButton.visible = false
-	setTextAndIcon(Global.cutsceneFirstText, Global.cutsceneFirstIcon)
+	pass
+	#$AnimationPlayer.play("Intro")
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):
@@ -24,7 +23,7 @@ func _on_AnimationPlayer_animation_finished(anim_name):
 	if anim_name == "Intro":
 		isLocked = false
 		$ContinueButton.visible = true
-		setTextAndIcon(Global.text, "")
+		setTextAndIcon(Global.cutsceneFirstText, Global.cutsceneFirstIcon)
 		emit_signal("finishIntro")
 
 func _on_ContinueButton_pressed():
@@ -43,4 +42,11 @@ func setTextAndIcon(text, icon):
 		$TalkerIcon.texture = null
 
 func playIntro():
+	setText("")
 	$AnimationPlayer.play("Intro")
+
+func hide():
+	$AnimationPlayer.play("Hide")
+
+func show():
+	$AnimationPlayer.play("Visible")

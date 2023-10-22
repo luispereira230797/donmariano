@@ -1,6 +1,6 @@
 extends KinematicBody2D
 
-const speed = 50
+var speed = 50
 const gravity = 20
 var velocity = Vector2()
 var moving_left = true
@@ -13,23 +13,21 @@ export var nearbyEnemies = [""]
 func _ready():
 	if type == 2:
 		$Container/Sprite.modulate = Color(1, 0, 0)
+		speed = speed*5
 
 func _process(delta):
 	move_character()
 	turn()
 	
 func move_character():
-	var auxSpeed = speed
-	if type == 2:
-		auxSpeed = auxSpeed*5
 	velocity.y += gravity
 	$AnimationPlayer.play("Walk")
 	if move:
 		if moving_left:
-			velocity.x = -auxSpeed
+			velocity.x = -speed
 			velocity = move_and_slide(velocity, Vector2.UP)
 		else:
-			velocity.x = auxSpeed
+			velocity.x = speed
 			velocity = move_and_slide(velocity, Vector2.UP)
 	else:
 		velocity.x = 0

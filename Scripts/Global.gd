@@ -15,6 +15,7 @@ var itemSelected = false
 var lastCheckPoint = null
 var lastEnemy = null
 var lastPosition = null
+var isFirstTime = true
 var gameOverFinalText = ""
 var gameOverMessage = ""
 var gameOverText = ""

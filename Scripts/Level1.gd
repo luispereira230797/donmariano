@@ -7,8 +7,12 @@ var timer = Timer.new()
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	$AnimationPlayer.play("Intro")
-	$Player/Camera2D.process_mode = Camera2D.CAMERA2D_PROCESS_IDLE
+	if Global.isFirstTime:
+		Global.isFirstTime = false
+		$AnimationPlayer.play("Intro")
+		$Player/Camera2D.process_mode = Camera2D.CAMERA2D_PROCESS_IDLE
+	else:
+		$Player.isLocked = false
 	if Global.lastPosition:
 		$Player/Camera2D.smoothing_enabled = false
 		get_node(Global.lastEnemy).remove(self)

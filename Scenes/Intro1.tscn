@@ -241,6 +241,7 @@ script = ExtResource( 5 )
 
 [node name="DialogBox" parent="." instance=ExtResource( 6 )]
 visible = false
+isLocked = true
 
 [node name="Background" type="Sprite" parent="."]
 position = Vector2( 639.889, 361.5 )

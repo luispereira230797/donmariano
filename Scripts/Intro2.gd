@@ -11,6 +11,7 @@ var pos = 0
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	$DialogBox.playIntro()
 	$AnimationPlayer.play("Intro")
 	$AudioStreamPlayer.play()
 	$AudioStreamPlayer.seek(Global.introMusicTime)
@@ -29,8 +30,7 @@ func set_expressions(pos):
 
 func _on_AnimationPlayer_animation_finished(anim_name):
 	if anim_name == "Intro":
-		$DialogBox.visible = true
-		$DialogBox.playIntro()
+		pass
 	elif anim_name == "End":
 		get_tree().change_scene("res://Scenes/Level1.tscn")
 
@@ -40,7 +40,7 @@ func _on_DialogBox_next():
 		set_expressions(pos)
 		pos+=1
 	else:
-		$DialogBox.visible = false
+		$DialogBox.hide()
 		$AnimationPlayer.play("End")
 
 

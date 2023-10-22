@@ -11,7 +11,7 @@ var pos = 0
 func _ready():
 	$AnimationPlayer.play("Intro")
 	$AudioStreamPlayer.play()
-	$DialogBox.visible = false
+	$DialogBox.playIntro()
 	var final = Global.getFinal()
 	if final == "final1":
 		dialog.append_array(Global.final1)
@@ -37,7 +37,6 @@ func _ready():
 
 func _on_AnimationPlayer_animation_finished(anim_name):
 	if anim_name == "Intro":
-		$DialogBox.visible = true
 		$DialogBox.setTextAndIcon(dialog[pos].text, dialog[pos].talker)
 		set_expressions(pos)
 		pos+=1
