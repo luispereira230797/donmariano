@@ -725,9 +725,6 @@ position = Vector2( 15395, -417 )
 type = 2
 nearbyEnemies = [ "Enemy19" ]
 
-[node name="Enemy22" parent="." instance=ExtResource( 3 )]
-position = Vector2( -485, 462 )
-
 [node name="DeathByFall" parent="." instance=ExtResource( 13 )]
 position = Vector2( 2792, 1068 )
 
