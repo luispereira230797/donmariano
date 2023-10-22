@@ -9,6 +9,7 @@
 
 [sub_resource type="Animation" id=1]
 resource_name = "Intro"
+length = 0.75
 tracks/0/type = "value"
 tracks/0/path = NodePath("Sprite2:position")
 tracks/0/interp = 1

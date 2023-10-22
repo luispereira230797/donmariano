@@ -30,7 +30,7 @@ func set_expressions(pos):
 func _on_AnimationPlayer_animation_finished(anim_name):
 	if anim_name == "Intro":
 		$DialogBox.visible = true
-		_on_DialogBox_next()
+		$DialogBox.playIntro()
 	elif anim_name == "End":
 		get_tree().change_scene("res://Scenes/Level1.tscn")
 
@@ -42,3 +42,7 @@ func _on_DialogBox_next():
 	else:
 		$DialogBox.visible = false
 		$AnimationPlayer.play("End")
+
+
+func _on_DialogBox_finishIntro():
+	_on_DialogBox_next()

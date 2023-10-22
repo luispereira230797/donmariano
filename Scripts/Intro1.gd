@@ -21,7 +21,7 @@ func _on_AnimationPlayer_animation_finished(anim_name):
 	if anim_name == "Intro":
 		$AnimationPlayer.play("LoopSleep")
 		$DialogBox.visible = true
-		_on_Dialog_next()
+		$DialogBox.playIntro()
 
 
 func _on_Dialog_next():
@@ -40,3 +40,7 @@ func set_expressions(pos):
 	var expressions = dialog[pos].character.split(",")
 	for expresion in expressions:
 		get_node(expresion).visible = true
+
+
+func _on_DialogBox_finishIntro():
+	_on_Dialog_next()

@@ -64,6 +64,7 @@ func _physics_process(delta):
 				$JumpSoundPlayer.play()
 				jumping = true
 			if $RayCast2DBottom.is_colliding() || $RayCast2DBottom2.is_colliding():
+				jumping = false
 				motion.y = jumpHeight
 			elif timeInAir < 0.25:
 				motion.y = jumpHeight

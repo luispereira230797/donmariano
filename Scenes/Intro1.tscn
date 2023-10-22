@@ -273,5 +273,6 @@ stream = ExtResource( 7 )
 volume_db = -10.0
 autoplay = true
 
+[connection signal="finishIntro" from="DialogBox" to="." method="_on_DialogBox_finishIntro"]
 [connection signal="next" from="DialogBox" to="." method="_on_Dialog_next"]
 [connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_AnimationPlayer_animation_finished"]
