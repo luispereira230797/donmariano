@@ -1,0 +1,244 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://Scenes/BaseButton.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Scripts/Main.gd" type="Script" id=2]
+[ext_resource path="res://assets/sprites/cinematics/intro1/intro1sleeping.png" type="Texture" id=3]
+[ext_resource path="res://assets/sprites/cinematics/intro1/intro1.png" type="Texture" id=4]
+[ext_resource path="res://assets/sprites/cinematics/intro1/intro1sleepingmouth.png" type="Texture" id=5]
+[ext_resource path="res://Sounds/BackgroundMusic-Como te voy a Olvidar.mp3" type="AudioStream" id=6]
+
+[sub_resource type="Animation" id=1]
+resource_name = "Loop"
+length = 2.0
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Background:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 608, 493 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Background:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 1.08287, 1.08287 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("ExpSleeping:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 608, 493 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("ExpSleeping:scale")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 1.083, 1.083 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("ExpSleeping:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray(  ),
+"transitions": PoolRealArray(  ),
+"update": 1,
+"values": [  ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("ExpSleepingMouth:position")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0, 1, 2 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 608, 493 ), Vector2( 618, 453 ), Vector2( 608, 493 ) ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("ExpSleepingMouth:scale")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 0, 1, 2 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1.083, 1.083 ), Vector2( 0.720667, 0.720667 ), Vector2( 1.083, 1.083 ) ]
+}
+tracks/7/type = "value"
+tracks/7/path = NodePath("ExpSleepingMouth:visible")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = {
+"times": PoolRealArray(  ),
+"transitions": PoolRealArray(  ),
+"update": 1,
+"values": [  ]
+}
+
+[sub_resource type="Animation" id=3]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("Background:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 639.889, 361.5 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Background:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0.673148, 0.673148 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("ExpSleeping:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 638, 364 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("ExpSleeping:scale")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0.673, 0.673 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("ExpSleeping:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ true ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("ExpSleepingMouth:position")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 638, 364 ) ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("ExpSleepingMouth:scale")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0.673, 0.673 ) ]
+}
+tracks/7/type = "value"
+tracks/7/path = NodePath("ExpSleepingMouth:visible")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ true ]
+}
+
+[node name="CanvasLayer" type="CanvasLayer"]
+script = ExtResource( 2 )
+
+[node name="BaseButton" parent="." instance=ExtResource( 1 )]
+text = "JUGAR"
+buttonText = "JUGAR"
+
+[node name="Background" type="Sprite" parent="."]
+position = Vector2( 639.889, 361.5 )
+scale = Vector2( 0.673148, 0.673148 )
+z_index = -1
+texture = ExtResource( 4 )
+
+[node name="ExpSleeping" type="Sprite" parent="."]
+position = Vector2( 638, 364 )
+scale = Vector2( 0.673, 0.673 )
+z_index = -1
+texture = ExtResource( 3 )
+
+[node name="ExpSleepingMouth" type="Sprite" parent="."]
+position = Vector2( 638, 364 )
+scale = Vector2( 0.673, 0.673 )
+z_index = -1
+texture = ExtResource( 5 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+anims/Loop = SubResource( 1 )
+anims/RESET = SubResource( 3 )
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 6 )
+volume_db = -10.0
+autoplay = true
+
+[connection signal="pressed" from="BaseButton" to="." method="_on_BaseButton_pressed"]
