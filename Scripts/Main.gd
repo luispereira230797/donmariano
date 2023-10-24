@@ -11,3 +11,7 @@ func _ready():
 
 func _on_BaseButton_pressed():
 	get_tree().change_scene("res://Scenes/Intro1.tscn")
+
+
+func _on_ExitButton_pressed():
+	get_tree().quit()

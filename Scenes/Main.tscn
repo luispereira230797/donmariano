@@ -211,6 +211,18 @@ tracks/7/keys = {
 [node name="CanvasLayer" type="CanvasLayer"]
 script = ExtResource( 2 )
 
+[node name="ExitButton" parent="." instance=ExtResource( 1 )]
+anchor_left = 0.52
+anchor_top = 0.827
+anchor_right = 0.52
+anchor_bottom = 0.827
+margin_left = -125.6
+margin_top = -29.44
+margin_right = 126.399
+margin_bottom = 29.56
+text = "SALIR"
+color = "red"
+
 [node name="BaseButton" parent="." instance=ExtResource( 1 )]
 anchor_left = 0.52
 anchor_top = 0.505
@@ -221,7 +233,6 @@ margin_top = 124.4
 margin_right = 125.399
 margin_bottom = 183.4
 text = "JUGAR"
-buttonText = "JUGAR"
 
 [node name="Background" type="Sprite" parent="."]
 position = Vector2( 639.889, 361.5 )
@@ -255,4 +266,5 @@ position = Vector2( 1121.7, 95.8467 )
 scale = Vector2( 0.240561, 0.240561 )
 texture = ExtResource( 7 )
 
+[connection signal="pressed" from="ExitButton" to="." method="_on_ExitButton_pressed"]
 [connection signal="pressed" from="BaseButton" to="." method="_on_BaseButton_pressed"]
