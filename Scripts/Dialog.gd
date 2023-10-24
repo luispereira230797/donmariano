@@ -1,7 +1,7 @@
 extends CanvasLayer
 signal next()
 signal finishIntro()
-export var isLocked = false
+export var isLocked = true
 # Declare member variables here. Examples:
 # var a = 2
 # var b = "text"
