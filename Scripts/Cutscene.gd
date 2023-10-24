@@ -13,7 +13,6 @@ func _ready():
 	reset()
 	$Items.visible = false
 	$AudioStreamPlayer.play()
-	$DialogBox.playIntro()
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):
 #	pass
@@ -43,9 +42,12 @@ func _on_DialogBox_next():
 
 func reset():
 	$AnimationPlayer.play(Global.current_scene)
-
+	$DialogBox.playIntro()
 
 func _on_ItemsCanvasLayer_itemSelected():
 	$Items.visible = false
 	reset()
-	$DialogBox.playIntro()
+
+
+func _on_DialogBox_finishIntro():
+	$DialogBox.setTextAndIcon(Global.cutsceneFirstText, Global.cutsceneFirstIcon)

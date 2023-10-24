@@ -23,7 +23,6 @@ func _on_AnimationPlayer_animation_finished(anim_name):
 	if anim_name == "Intro":
 		isLocked = false
 		$ContinueButton.visible = true
-		setTextAndIcon(Global.cutsceneFirstText, Global.cutsceneFirstIcon)
 		emit_signal("finishIntro")
 
 func _on_ContinueButton_pressed():
@@ -42,7 +41,7 @@ func setTextAndIcon(text, icon):
 		$TalkerIcon.texture = null
 
 func playIntro():
-	setText("")
+	setTextAndIcon("", "")
 	$AnimationPlayer.play("Intro")
 
 func hide():

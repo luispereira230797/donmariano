@@ -393,4 +393,5 @@ volume_db = -10.0
 
 [connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_AnimationPlayer_animation_finished"]
 [connection signal="itemSelected" from="Items" to="." method="_on_ItemsCanvasLayer_itemSelected"]
+[connection signal="finishIntro" from="DialogBox" to="." method="_on_DialogBox_finishIntro"]
 [connection signal="next" from="DialogBox" to="." method="_on_DialogBox_next"]

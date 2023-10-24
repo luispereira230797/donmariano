@@ -293,6 +293,18 @@ tracks/6/keys = {
 "update": 0,
 "values": [ false ]
 }
+tracks/7/type = "value"
+tracks/7/path = NodePath("Label:percent_visible")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 0.0 ]
+}
 
 [sub_resource type="Animation" id=4]
 resource_name = "SetText"
@@ -534,6 +546,7 @@ scale = Vector2( 0.164989, 0.164989 )
 texture = ExtResource( 6 )
 
 [node name="TalkerAnimation" type="AnimationPlayer" parent="."]
+reset_on_save = false
 anims/Loop = SubResource( 7 )
 anims/RESET = SubResource( 8 )
 
