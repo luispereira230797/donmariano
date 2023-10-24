@@ -10,7 +10,7 @@ config_version=4
 
 [application]
 
-config/name="Don Mario"
+config/name="Don Mariano"
 run/main_scene="res://Scenes/Main.tscn"
 boot_splash/image="res://assets/splash.png"
 config/icon="res://icon.png"
