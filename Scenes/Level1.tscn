@@ -639,7 +639,7 @@ anims/Intro = SubResource( 26 )
 anims/RESET = SubResource( 27 )
 
 [node name="Player" parent="." instance=ExtResource( 1 )]
-position = Vector2( -786.7, 464 )
+position = Vector2( -767.2, 463 )
 animation = "Walk"
 
 [node name="Enemy" parent="." instance=ExtResource( 3 )]

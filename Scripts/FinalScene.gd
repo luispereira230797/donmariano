@@ -38,9 +38,7 @@ func _ready():
 
 func _on_AnimationPlayer_animation_finished(anim_name):
 	if anim_name == "Intro":
-		$DialogBox.setTextAndIcon(dialog[pos].text, dialog[pos].talker)
-		set_expressions(pos)
-		pos+=1
+		pass
 
 func _on_DialogBox_next():
 	if pos < dialog.size():
@@ -64,3 +62,7 @@ func set_expressions(pos):
 	$WifeCry.visible = false
 	get_node(dialog[pos].wife).visible = true
 	get_node(dialog[pos].character).visible = true
+
+
+func _on_DialogBox_finishIntro():
+	_on_DialogBox_next()
