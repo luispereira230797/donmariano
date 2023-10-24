@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Fonts/Product Sans Regular.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://Styles/StyleBaseButtonHover.tres" type="StyleBox" id=2]
@@ -9,65 +9,15 @@
 size = 24
 font_data = ExtResource( 1 )
 
-[sub_resource type="Animation" id=2]
-resource_name = "Intro"
-tracks/0/type = "value"
-tracks/0/path = NodePath(".:rect_position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 0, 0.5 ),
-"transitions": PoolRealArray( 1, 1 ),
-"update": 0,
-"values": [ Vector2( 485, 901 ), Vector2( 496, 581 ) ]
-}
-tracks/1/type = "value"
-tracks/1/path = NodePath(".:rect_rotation")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/keys = {
-"times": PoolRealArray( 0, 0.5, 0.6 ),
-"transitions": PoolRealArray( 1, 1, 1 ),
-"update": 0,
-"values": [ -2.63693, -2.63693, 0.0 ]
-}
-
-[sub_resource type="Animation" id=3]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/path = NodePath(".:rect_position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 0,
-"values": [ Vector2( 496, 537 ) ]
-}
-tracks/1/type = "value"
-tracks/1/path = NodePath(".:rect_rotation")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 0,
-"values": [ 0.0 ]
-}
-
 [node name="BaseButton" type="Button"]
-margin_left = 496.0
-margin_top = 537.0
-margin_right = 747.999
-margin_bottom = 596.0
+anchor_left = 0.486
+anchor_top = 0.787
+anchor_right = 0.486
+anchor_bottom = 0.787
+margin_left = -126.08
+margin_top = -29.64
+margin_right = 125.919
+margin_bottom = 29.36
 custom_colors/font_color_disabled = Color( 1, 1, 1, 1 )
 custom_colors/font_color_focus = Color( 1, 1, 1, 1 )
 custom_colors/font_color = Color( 1, 1, 1, 1 )
@@ -81,9 +31,5 @@ custom_styles/disabled = ExtResource( 3 )
 custom_styles/normal = ExtResource( 3 )
 text = "REINTENTAR"
 script = ExtResource( 4 )
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-anims/Intro = SubResource( 2 )
-anims/RESET = SubResource( 3 )
 
 [connection signal="pressed" from="." to="." method="_on_BaseButton_pressed"]
