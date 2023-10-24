@@ -8,6 +8,7 @@ extends Node2D
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	Global.enableCursor()
 	var ending = getEnding()
 	get_node(ending).visible = true
 	$AnimationPlayer.play(ending)

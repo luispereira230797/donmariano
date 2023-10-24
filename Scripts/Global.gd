@@ -724,3 +724,9 @@ func retry():
 
 func setGoodEndingColor():
 	gameOverFinalColor = "00ff16"
+
+func disableCursor():
+	Input.set_mouse_mode(Input.MOUSE_MODE_HIDDEN)
+
+func enableCursor():
+	Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)

@@ -7,6 +7,7 @@ var timer = Timer.new()
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	Global.disableCursor()
 	if Global.isFirstTime:
 		Global.isFirstTime = false
 		$AnimationPlayer.play("Intro")
