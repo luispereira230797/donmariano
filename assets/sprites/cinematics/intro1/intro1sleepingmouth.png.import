@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/intro1sleepingmouth.png-0ee8ff091c2e974b3ef409c80643fd12.stex"
+path="res://.import/intro1sleepingmouth.png-a2df5c8b7e869fb9440eca9d6aa223a7.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Sprites/cinematics/intro1/intro1sleepingmouth.png"
-dest_files=[ "res://.import/intro1sleepingmouth.png-0ee8ff091c2e974b3ef409c80643fd12.stex" ]
+source_file="res://assets/sprites/cinematics/intro1/intro1sleepingmouth.png"
+dest_files=[ "res://.import/intro1sleepingmouth.png-a2df5c8b7e869fb9440eca9d6aa223a7.stex" ]
 
 [params]
 

@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/boxdialog2.png-821535c4d13fdfb0ba3fce2ae0ab3a1f.stex"
+path="res://.import/boxdialog2.png-a33a2ab9064b0d6edd96ba0a115a1510.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Sprites/boxdialog2.png"
-dest_files=[ "res://.import/boxdialog2.png-821535c4d13fdfb0ba3fce2ae0ab3a1f.stex" ]
+source_file="res://assets/sprites/boxdialog2.png"
+dest_files=[ "res://.import/boxdialog2.png-a33a2ab9064b0d6edd96ba0a115a1510.stex" ]
 
 [params]
 

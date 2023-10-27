@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/intro1wakeup.png-88c2b0e48d27955b387afd7dd7b2284e.stex"
+path="res://.import/intro1wakeup.png-44103144516e683ff55e4c6376c97983.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Sprites/cinematics/intro1/intro1wakeup.png"
-dest_files=[ "res://.import/intro1wakeup.png-88c2b0e48d27955b387afd7dd7b2284e.stex" ]
+source_file="res://assets/sprites/cinematics/intro1/intro1wakeup.png"
+dest_files=[ "res://.import/intro1wakeup.png-44103144516e683ff55e4c6376c97983.stex" ]
 
 [params]
 

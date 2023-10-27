@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/gameovermessage.png-c9837ce232a4c5117d3a3fd5e91b2a9f.stex"
+path="res://.import/gameovermessage.png-91a5f602dc8b7aa5fd16a29e171b7203.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Sprites/gameovermessage.png"
-dest_files=[ "res://.import/gameovermessage.png-c9837ce232a4c5117d3a3fd5e91b2a9f.stex" ]
+source_file="res://assets/sprites/gameovermessage.png"
+dest_files=[ "res://.import/gameovermessage.png-91a5f602dc8b7aa5fd16a29e171b7203.stex" ]
 
 [params]
 

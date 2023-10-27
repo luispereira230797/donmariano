@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/wifeexpcry.png-efb685b26cd317c01632b54e840618d8.stex"
+path="res://.import/wifeexpcry.png-9c02338c40c8c9aabf41c91b5ac7c07b.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Sprites/wifeexpcry.png"
-dest_files=[ "res://.import/wifeexpcry.png-efb685b26cd317c01632b54e840618d8.stex" ]
+source_file="res://assets/sprites/wifeexpcry.png"
+dest_files=[ "res://.import/wifeexpcry.png-9c02338c40c8c9aabf41c91b5ac7c07b.stex" ]
 
 [params]
 

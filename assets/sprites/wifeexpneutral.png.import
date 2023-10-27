@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/wifeexpneutral.png-175a3230a13eb11ed7d603f11565fda9.stex"
+path="res://.import/wifeexpneutral.png-780b1a8cc34f76d5cd96763c548fc389.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Sprites/wifeexpneutral.png"
-dest_files=[ "res://.import/wifeexpneutral.png-175a3230a13eb11ed7d603f11565fda9.stex" ]
+source_file="res://assets/sprites/wifeexpneutral.png"
+dest_files=[ "res://.import/wifeexpneutral.png-780b1a8cc34f76d5cd96763c548fc389.stex" ]
 
 [params]
 

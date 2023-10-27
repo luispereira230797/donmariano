@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/checkpointunchecked.png-9af11b9d8e07df810adcff4f9b464d40.stex"
+path="res://.import/checkpointunchecked.png-296f530089795d6603e5c205b9f27877.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Sprites/checkpointunchecked.png"
-dest_files=[ "res://.import/checkpointunchecked.png-9af11b9d8e07df810adcff4f9b464d40.stex" ]
+source_file="res://assets/sprites/checkpointunchecked.png"
+dest_files=[ "res://.import/checkpointunchecked.png-296f530089795d6603e5c205b9f27877.stex" ]
 
 [params]
 

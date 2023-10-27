@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/miniwife.png-ab443b90a2c27d538f4e0eea5a1db71d.stex"
+path="res://.import/miniwife.png-b3f821cf8aa2e099070cbc04e3c47457.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Sprites/miniwife.png"
-dest_files=[ "res://.import/miniwife.png-ab443b90a2c27d538f4e0eea5a1db71d.stex" ]
+source_file="res://assets/sprites/miniwife.png"
+dest_files=[ "res://.import/miniwife.png-b3f821cf8aa2e099070cbc04e3c47457.stex" ]
 
 [params]
 

@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/characterfinalexpworried.png-397596383729638ed5791304925ef55b.stex"
+path="res://.import/characterfinalexpworried.png-d1823e5b1951379768e77c6055511b63.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Sprites/characterfinalexpworried.png"
-dest_files=[ "res://.import/characterfinalexpworried.png-397596383729638ed5791304925ef55b.stex" ]
+source_file="res://assets/sprites/characterfinalexpworried.png"
+dest_files=[ "res://.import/characterfinalexpworried.png-d1823e5b1951379768e77c6055511b63.stex" ]
 
 [params]
 
