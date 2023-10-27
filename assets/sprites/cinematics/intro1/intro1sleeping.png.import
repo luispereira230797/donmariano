@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/intro1sleeping.png-4ff9d2d3bc118ca3e8cdd201d51c94e9.stex"
+path="res://.import/intro1sleeping.png-c95f68609e2e37888d82f50609679815.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/cinematics/intro1/intro1sleeping.png"
-dest_files=[ "res://.import/intro1sleeping.png-4ff9d2d3bc118ca3e8cdd201d51c94e9.stex" ]
+source_file="res://assets/Sprites/cinematics/intro1/intro1sleeping.png"
+dest_files=[ "res://.import/intro1sleeping.png-c95f68609e2e37888d82f50609679815.stex" ]
 
 [params]
 

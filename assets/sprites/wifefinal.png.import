@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/wifefinal.png-fc222f18026c31bff842a76717101dc3.stex"
+path="res://.import/wifefinal.png-fd2892b35be488fe80d8eb99cbd101f9.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/wifefinal.png"
-dest_files=[ "res://.import/wifefinal.png-fc222f18026c31bff842a76717101dc3.stex" ]
+source_file="res://assets/Sprites/wifefinal.png"
+dest_files=[ "res://.import/wifefinal.png-fd2892b35be488fe80d8eb99cbd101f9.stex" ]
 
 [params]
 

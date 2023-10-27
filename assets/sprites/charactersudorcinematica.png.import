@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/charactersudorcinematica.png-971f2bc146cc69b4f02331ce70cc3dbc.stex"
+path="res://.import/charactersudorcinematica.png-8a4f1c3402cc257e7ab50fb0f6dc9f9f.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/charactersudorcinematica.png"
-dest_files=[ "res://.import/charactersudorcinematica.png-971f2bc146cc69b4f02331ce70cc3dbc.stex" ]
+source_file="res://assets/Sprites/charactersudorcinematica.png"
+dest_files=[ "res://.import/charactersudorcinematica.png-8a4f1c3402cc257e7ab50fb0f6dc9f9f.stex" ]
 
 [params]
 

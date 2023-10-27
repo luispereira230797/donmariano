@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/gameoverfallingmessage.png-696719a7f6cdde9096e93b2c95d7c0d8.stex"
+path="res://.import/gameoverfallingmessage.png-89f4261df332eedf90e8e0717df8b746.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/gameoverfallingmessage.png"
-dest_files=[ "res://.import/gameoverfallingmessage.png-696719a7f6cdde9096e93b2c95d7c0d8.stex" ]
+source_file="res://assets/Sprites/gameoverfallingmessage.png"
+dest_files=[ "res://.import/gameoverfallingmessage.png-89f4261df332eedf90e8e0717df8b746.stex" ]
 
 [params]
 

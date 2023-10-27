@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/backgroundcinematica.png-c1e9486635f803be7d6208146b4e68a4.stex"
+path="res://.import/backgroundcinematica.png-06c15cb5f13882d45d1f54adca13e109.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/backgroundcinematica.png"
-dest_files=[ "res://.import/backgroundcinematica.png-c1e9486635f803be7d6208146b4e68a4.stex" ]
+source_file="res://assets/Sprites/backgroundcinematica.png"
+dest_files=[ "res://.import/backgroundcinematica.png-06c15cb5f13882d45d1f54adca13e109.stex" ]
 
 [params]
 

@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/ending4.png-513a8d0b77639aa6c673879b19eebfce.stex"
+path="res://.import/ending4.png-2b36140d29c320aabe5a104199e4f44a.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/ending4.png"
-dest_files=[ "res://.import/ending4.png-513a8d0b77639aa6c673879b19eebfce.stex" ]
+source_file="res://assets/Sprites/ending4.png"
+dest_files=[ "res://.import/ending4.png-2b36140d29c320aabe5a104199e4f44a.stex" ]
 
 [params]
 

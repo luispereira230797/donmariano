@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/minidonmario.png-8b86398c4ede6b48d89aa4c45b024e69.stex"
+path="res://.import/minidonmario.png-42f1cd3506579c41d1cf159ab6227054.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/minidonmario.png"
-dest_files=[ "res://.import/minidonmario.png-8b86398c4ede6b48d89aa4c45b024e69.stex" ]
+source_file="res://assets/Sprites/minidonmario.png"
+dest_files=[ "res://.import/minidonmario.png-42f1cd3506579c41d1cf159ab6227054.stex" ]
 
 [params]
 

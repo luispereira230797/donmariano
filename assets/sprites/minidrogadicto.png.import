@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/minidrogadicto.png-521e7f34f016cfec9c16709505d36eb9.stex"
+path="res://.import/minidrogadicto.png-1745ee3f3fb8420f24c6670439ff6101.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/minidrogadicto.png"
-dest_files=[ "res://.import/minidrogadicto.png-521e7f34f016cfec9c16709505d36eb9.stex" ]
+source_file="res://assets/Sprites/minidrogadicto.png"
+dest_files=[ "res://.import/minidrogadicto.png-1745ee3f3fb8420f24c6670439ff6101.stex" ]
 
 [params]
 

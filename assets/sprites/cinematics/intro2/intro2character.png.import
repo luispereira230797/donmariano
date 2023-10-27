@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/intro2character.png-85a7fb70f6299c5f6af69da1f7447ac8.stex"
+path="res://.import/intro2character.png-b4f9d5e77b5e96f8e45cf5c7e4b55c17.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/cinematics/intro2/intro2character.png"
-dest_files=[ "res://.import/intro2character.png-85a7fb70f6299c5f6af69da1f7447ac8.stex" ]
+source_file="res://assets/Sprites/cinematics/intro2/intro2character.png"
+dest_files=[ "res://.import/intro2character.png-b4f9d5e77b5e96f8e45cf5c7e4b55c17.stex" ]
 
 [params]
 
