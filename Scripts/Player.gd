@@ -2,6 +2,7 @@ extends KinematicBody2D
 
 const moveSpeed = 30
 const maxSpeed = 330
+const maxRunSpeed = 500
 
 const jumpHeight = -500
 const up = Vector2(0, -1)
@@ -24,6 +25,9 @@ func _physics_process(delta):
 			timeInAir += delta
 		motion.y += gravity
 		var friction = false
+		var auxMaxSpeed = maxSpeed
+		if Input.is_action_pressed("ui_run"):
+			auxMaxSpeed = maxRunSpeed
 		# If press right go to right
 		if Input.is_action_pressed("ui_right") && Input.is_action_pressed("ui_left"):
 			sprite.flip_h = false
@@ -37,8 +41,8 @@ func _physics_process(delta):
 			if movingLeft:
 				motion.x = moveSpeed
 				movingLeft = false
-			elif(motion.x + moveSpeed > maxSpeed):
-				motion.x = maxSpeed
+			elif(motion.x + moveSpeed > auxMaxSpeed):
+				motion.x = auxMaxSpeed
 			else:
 				motion.x = motion.x + moveSpeed
 		# If press left go to left
@@ -50,8 +54,8 @@ func _physics_process(delta):
 			if movingRight:
 				motion.x = -moveSpeed
 				movingRight = false
-			elif(motion.x - moveSpeed < -maxSpeed):
-				motion.x = -maxSpeed
+			elif(motion.x - moveSpeed < -auxMaxSpeed):
+				motion.x = -auxMaxSpeed
 			else:
 				motion.x = motion.x - moveSpeed
 		else:
