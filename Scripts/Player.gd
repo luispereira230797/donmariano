@@ -7,25 +7,37 @@ const maxRunSpeed = 500
 const jumpHeight = -500
 const up = Vector2(0, -1)
 const gravity = 30
+const POWER_COOLDOWN = 0.5
 onready var sprite = $Sprite
+export var isLocked = false
+export var animation = "Idle"
 var timeInAir = 0
+var timeWithoutPower = 0
 var movingRight = false
 var movingLeft = false
 var jumping = false
-export var isLocked = false
-export var animation = "Idle"
-
+var hasBrick = true
+var direction = 1
 var motion = Vector2()
 
 func _physics_process(delta):
 	if !isLocked:
+		# Coyote time
 		if $RayCast2DBottom.is_colliding() || $RayCast2DBottom2.is_colliding():
 			timeInAir = 0
 		else:
 			timeInAir += delta
+		timeWithoutPower+= delta
 		motion.y += gravity
 		var friction = false
 		var auxMaxSpeed = maxSpeed
+		
+		#Launch brick
+		if Input.is_action_just_pressed("ui_power") && hasBrick && timeWithoutPower > POWER_COOLDOWN:
+			launchBrick()
+			timeWithoutPower = 0
+		
+		# Ui management
 		if Input.is_action_pressed("ui_run"):
 			auxMaxSpeed = maxRunSpeed
 		# If press right go to right
@@ -37,7 +49,11 @@ func _physics_process(delta):
 			movingRight = true
 			sprite.flip_h = false
 			sprite.offset.x = 0
-			playAnimation("Walk")
+			direction = 1
+			if Input.is_action_pressed("ui_run"):
+				playAnimation("Run")
+			else:
+				playAnimation("Walk")
 			if movingLeft:
 				motion.x = moveSpeed
 				movingLeft = false
@@ -47,10 +63,14 @@ func _physics_process(delta):
 				motion.x = motion.x + moveSpeed
 		# If press left go to left
 		elif Input.is_action_pressed("ui_left"):
+			direction = -1
 			movingLeft = true
 			sprite.flip_h = true
 			sprite.offset.x = 50
-			playAnimation("Walk")
+			if Input.is_action_pressed("ui_run"):
+				playAnimation("Run")
+			else:
+				playAnimation("Walk")
 			if movingRight:
 				motion.x = -moveSpeed
 				movingRight = false
@@ -118,3 +138,10 @@ func getNearbyEnemies():
 
 func playAnimation(animation):
 	$AnimationPlayer.play(animation)
+
+func launchBrick():
+	var brick = load("res://Scenes/ParabolicBrick.tscn")
+	var instance = brick.instance()
+	instance.startPosition = global_position
+	instance.direction = direction
+	get_parent().add_child(instance)
