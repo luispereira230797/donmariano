@@ -21,6 +21,7 @@ var direction = 1
 var motion = Vector2()
 
 func _physics_process(delta):
+	$Camera2D.current = true
 	if !isLocked:
 		# Coyote time
 		if $RayCast2DBottom.is_colliding() || $RayCast2DBottom2.is_colliding():

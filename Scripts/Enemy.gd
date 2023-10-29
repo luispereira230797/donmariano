@@ -36,7 +36,7 @@ func move_character():
 		velocity = move_and_slide(velocity, Vector2.UP)
 
 func turn():
-	if not $Container/RayCastBottom.is_colliding() || $Container/RayCastForward.is_colliding():
+	if (not $Container/RayCastBottom.is_colliding() || $Container/RayCastForward.is_colliding()) && move:
 		moving_left = !moving_left
 		$Container.scale.x = -$Container.scale.x
 
