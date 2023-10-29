@@ -6,7 +6,7 @@ export var startPosition = Vector2(0, 0)
 export var initialPosition = Vector2(0, 0)
 export var direction = 1
 var initialVelocity = 1000  # Cambia esta velocidad inicial según tus necesidades
-var angle = deg2rad(45)  # Cambia el ángulo según tus necesidades
+var angle = deg2rad(40)  # Cambia el ángulo según tus necesidades
 var gravity = 1500  # Ajusta la gravedad según tus necesidades
 
 var time = 0
