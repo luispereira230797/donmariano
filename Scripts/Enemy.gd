@@ -4,6 +4,8 @@ var speed = 50
 const gravity = 20
 var velocity = Vector2()
 var moving_left = true
+var timeAlive = 0
+var cooldown = -1
 
 export var move = true
 export var type = 1
@@ -12,10 +14,10 @@ export var nearbyEnemies = [""]
 
 func _ready():
 	if type == 2:
-		$Container/Sprite.modulate = Color(1, 0, 0)
 		speed = speed*5
 
 func _process(delta):
+	timeAlive += delta
 	move_character()
 	turn()
 	
@@ -39,10 +41,11 @@ func turn():
 		$Container.scale.x = -$Container.scale.x
 
 func loseLife():
-	canKill = false
-	$Area2D/CollisionShape2D.set_deferred("disabled", true)
-	$CollisionShape2D.set_deferred("disabled", true)
-	$Area2D/CollisionShape2D
+	if cooldown != -1 && timeAlive > cooldown || cooldown == -1:
+		canKill = false
+		$Area2D/CollisionShape2D.set_deferred("disabled", true)
+		$CollisionShape2D.set_deferred("disabled", true)
+		$Area2D/CollisionShape2D
 
 func _on_Area2D2_body_entered(body):
 	if body.get_name() == "Player":
