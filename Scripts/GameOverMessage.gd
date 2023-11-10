@@ -7,6 +7,7 @@ extends CanvasLayer
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	Global.final()
 	$LabelMessage.text = Global.gameOverMessage
 	$LabelGameOver.text = Global.gameOverText
 	$LabelFinalText.text = Global.gameOverFinalText
